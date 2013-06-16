@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        testicles
+// @name        ricechan
 // @namespace   eric
 // @description insert parent selectors jscript
 // @include     https://boards.4chan.org/*
@@ -91,6 +91,7 @@ $(window).bind('scroll', function () {
     }
 });
 
-
+window.scrollBy(0,1);
+window.scrollBy(0,-1);
 
 

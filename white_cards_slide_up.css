@@ -3,7 +3,11 @@
 @-moz-document domain("boards.4chan.org") { 
     *                                       { font-family: liberation sans !important;
     }
-    
+        
+ #globalMessage {position: absolute !important; top: -5px; z-index: 500!important;color: white !important; padding-left: 13%; text-align: left !important; padding-right: 33%; }
+ #globalMessage a {color: #ddd !important; text-decoration: none !important; }
+ .hide-announcement {font-size: 0px;}
+ .hide-announcement:after {font-size: 10px; !important; color: white !important; position: absolute; right: 32%; top: 10px; content: "x" !important; z-index: 5000 !important;}
     
 .thread, .replyContainer {   perspective:500px;
 perspective-origin: 50% 10%;}

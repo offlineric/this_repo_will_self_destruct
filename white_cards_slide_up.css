@@ -3,12 +3,13 @@
 @-moz-document domain("boards.4chan.org") { 
     *                                       { font-family: liberation sans !important;
     }
-        
- #globalMessage {position: absolute !important; top: -5px; z-index: 500!important;color: white !important; padding-left: 13%; text-align: left !important; padding-right: 33%; }
+    
+ #globalMessage {position: absolute !important; top: -5px; z-index: 500!important;color: white !important; padding-left: 130px; text-align: left !important; padding-right: 330px; }
  #globalMessage a {color: #ddd !important; text-decoration: none !important; }
  .hide-announcement {font-size: 0px;}
- .hide-announcement:after {font-size: 10px; !important; color: white !important; position: absolute; right: 32%; top: 10px; content: "x" !important; z-index: 5000 !important;}
-    
+ .hide-announcement:hover:after {color: red !important;}
+ .hide-announcement:after {font-size: 10px; !important; color: white !important; position: absolute; left: 130px; top: 13px; content: "x" !important; z-index: 5000 !important;}
+ #globalMessage a:hover{color:#aaf !important;}
 .thread, .replyContainer {   perspective:500px;
 perspective-origin: 50% 10%;}
 .come-in {
@@ -20,8 +21,9 @@ perspective-origin: 50% 10%;}
 .come-in:nth-child(odd) {
   animation-duration: .6s; /* So they look staggered */
 }
+#qp > .come-in {transform: translateY(-10%) ; opacity: .05;}
 @keyframes come-in {
-  to {     transform: translateY(-1px) ; opacity: 1;}
+  to {     transform: translateY(-1px) scale(1); opacity: 1; }
 }
     #qp {background: transparent!important; border: solid black 0px !important; box-shadow: none!important;}
 
@@ -58,18 +60,21 @@ perspective-origin: 50% 10%;}
                                              color: #999faa !important;
                                              font-size: 9pt !important
                                             }
-    .boardTitle:before {position: absolute; left: 0px; top: -15px; bottom: -20px ; width: 450px;
-    content: " "; background-image: url(file:/home/eric/Pictures/Wallpapers/bandwaifu.png);
+    .boardTitle:before {position: absolute; left: 0px; top: -15px;  width: 450px; height: 150px;
+    content: " "; background-image: url('http://i.imgur.com/6E5Q2wv.png');
     background-repeat:no-repeat; padding-top: 10px;
     text-align: left; padding-left: 136px;
     font: normal 900 20pt monkeys and bananas;}
-    .boardTitle:after {position: absolute; left: 0px; top: -15px; right: -1px; bottom: -15px; border-radius: 4px; border-bottom-left-radius: 0px;
+    .boardTitle:after {position: absolute; left: 0px; top: -16px; right: 0px; height: 100px; border-radius: 4px; border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
-    z-index: -1 ; background-image: url(file:/home/eric/Pictures/Wallpapers/shittyshit.png); content: " " ; }
+    z-index: -1 ; background-image: url('http://i.imgur.com/55bXerR.jpg'); content: " " ; }
     .boardTitle
                                             {
-                                             margin-top: 0px !important;
-                                             margin-right: 4px !important;
+                                             position: absolute;
+                                             left: 0px;
+                                             right: 0px;
+                                             margin-top: -0px !important;
+                                             margin-right: 0px !important;
                                              margin-bottom: 8px !important;
                                              color: #5c6066 !important;
                                              color: #fff !important;
@@ -82,8 +87,8 @@ perspective-origin: 50% 10%;}
                                             {
                                             text-align: right !important;
                                              position: absolute !important;
-                                             width: 98% !important;
-                                             margin-right: auto !important; margin-bottom: 3px !important; margin-bottom: -17px!important; margin-left: auto !important;
+                                            right: 0px; left: 0px;
+                                             margin-right:10px !important; margin-bottom: 3px !important; margin-bottom: -17px!important; margin-left: 10px !important;
                                              padding-top: 2px !important; padding-bottom: 15px !important;
 
                                              background: #fafafa !important;
@@ -94,8 +99,9 @@ perspective-origin: 50% 10%;}
                                             }
     .boardSubtitle
                                             {
-                                             margin-top: -2px !important;
-                                             margin-right: 8px !important;
+                                             position: absolute;
+                                             top: 45px;
+                                             right: 5px;
                                              color: #5c6066 !important;
                                              color: #fff !important;
                                              font: bold 8pt Lucida Grande !important;
@@ -201,7 +207,8 @@ perspective-origin: 50% 10%;}
                                             {
                                              margin-right: 4px !important;
                                              font-size: 9pt !important;
-                                             content: url('http://i.imgur.com/S16zbNg.png') !important
+                                             content: url('http://i.imgur.com/S16zbNg.png') !important;
+                                             content: url('http://i.imgur.com/QK7xFPG.png') !important;
                                             }
     .postMessage                            { color: #13040a!important }
     .linkifyplus a,
@@ -298,8 +305,9 @@ perspective-origin: 50% 10%;}
     div.navLinksBot                         { display: none !important }
     body
                                             {
-                                             width: 99% !important; width: 98% !important;
-                                             margin: 0px !important;margin-top: 0px!important; margin-right: 0 !important; margin-left: 1%!important;
+
+                                             left: 5px; right: 5px;
+                                             margin: 0px !important;margin-top: 0px!important; margin-right: 12px !important; margin-left: 10px!important;
                                              padding-top: 0px !important;
                                               padding: 0px !important;  padding-bottom: 15px !important;
                                              background: #dddeee !important;
@@ -312,7 +320,7 @@ perspective-origin: 50% 10%;}
 
     #header-bar
                                             {
-                                             margin-top: 0px !important; margin-right: .9% !important; margin-left: 1% !important;
+                                             margin-top: 0px !important; margin-right: 10px !important; margin-left: 10px !important;
                                              padding-top: 6px!important;
 
                                              color: #222 !important;
@@ -520,7 +528,8 @@ perspective-origin: 50% 10%;}
                                              margin-top: -1px !important; margin-right: 5px !important; margin-left: 0px !important;
                                              color: transparent !important
                                             }
-    .replylink:before                       { content: url("http://imgur.com/WpNCh.png") !important }
+    .replylink:before                       { content: url("http://imgur.com/WpNCh.png") !important;
+                                              content: url('http://i.imgur.com/Lw61J8H.gif') !important;}
     a.replylink                             { font-size: 0px !important }
     /*Icon that overlays the favicon
         .opContainer > div .postInfo:before {

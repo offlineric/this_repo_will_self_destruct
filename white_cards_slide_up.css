@@ -25,7 +25,7 @@ perspective-origin: 50% 10%;}
 @keyframes come-in {
   to {     transform: translateY(-1px) scale(1); opacity: 1; }
 }
-    #qp {background: transparent!important; border: solid black 0px !important; box-shadow: none!important;}
+    #qp {background: transparent!important; border: solid black 0px !important; box-shadow: none!important; margin-right: 10px !important; margin-top: 20px !important;}
 
 
     
@@ -207,9 +207,10 @@ perspective-origin: 50% 10%;}
                                             {
                                              margin-right: 4px !important;
 
-                                             font-size: 9pt !important;
+                                             font-size: 11pt !important;
                                              content: url('http://i.imgur.com/S16zbNg.png') !important;
-                                             content: url('http://oldforums.eveonline.com/bitmaps/img/board_icons/icon_quote_message.gif') !important;
+                                             content: url('http://sms.hive.my/icon_comment.jpg') !important;
+
 
                                             }
     .postMessage                            { color: #13040a!important }

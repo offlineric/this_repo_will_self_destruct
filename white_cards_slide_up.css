@@ -206,9 +206,11 @@ perspective-origin: 50% 10%;}
     .backlink:after
                                             {
                                              margin-right: 4px !important;
+
                                              font-size: 9pt !important;
                                              content: url('http://i.imgur.com/S16zbNg.png') !important;
-                                             content: url('http://i.imgur.com/QK7xFPG.png') !important;
+                                             content: url('http://oldforums.eveonline.com/bitmaps/img/board_icons/icon_quote_message.gif') !important;
+
                                             }
     .postMessage                            { color: #13040a!important }
     .linkifyplus a,
@@ -529,7 +531,8 @@ perspective-origin: 50% 10%;}
                                              color: transparent !important
                                             }
     .replylink:before                       { content: url("http://imgur.com/WpNCh.png") !important;
-                                              content: url('http://i.imgur.com/Lw61J8H.gif') !important;}
+                                              content: url('http://i.imgur.com/Lw61J8H.gif') !important;
+                                              content: url('http://i.imgur.com/RyoKRXc.gif') !important;}
     a.replylink                             { font-size: 0px !important }
     /*Icon that overlays the favicon
         .opContainer > div .postInfo:before {
@@ -862,6 +865,8 @@ padding-top: 5px;border-top: solid 1px #eee !important; padding-bottom: 2px;
                              font-size: 10pt !important;
                              background: #eceef0 !important;
                              font-family: Liberation Sans !important;
+                             background: transparent !important;
+
                             }
     #togglePostForm
                             {
@@ -879,25 +884,29 @@ padding-top: 5px;border-top: solid 1px #eee !important; padding-bottom: 2px;
     #threads
                             {
                              width: 94% !important;
-                             margin-top: 50px !important;
+                             margin-top: 190px !important;
                              margin: 0 auto !important;
                              background-color: #fff !important;
                              box-shadow: 0px 1px 2px -1px rgba(0,0,0,0.2) !important;
-                             border-radius: 2px !important;
+                             border-radius: 2px !important; -moz-columns: 3;
+                             padding-top: 95px !important;                             background: transparent !important;
                             }
     /* Override the .thread properties defined for the boards */
     .thread
                             {
                              width: 250px !important; max-height: 410px !important;
                              margin: 0px !important; margin: 5px !important;
-                             background-color: #f8f8f8 !important;
-                             box-shadow: inset 0px 1px 2px -1px rgba(0,0,0,0.2) !important;
+                             background-color: #fff !important;
+                             border: 0px !important;
                              border-radius: 2px !important;
+
                             }
-    .thumb
+   
+    div#settings.mobilebtn, a#settingsWindowLink {display: none;}
+   .thumb
                             {
                              max-width: 220px !important;
-                             margin-top: 5px !important;
+                             margin-top: 25px !important;
                              border-top: none !important;
                              border-radius: 1px !important;
                              box-shadow: 0px 1px 2px rgba(0,0,0,0.3) !important;

@@ -4,12 +4,13 @@
     *                                       { font-family: liberation sans !important;
     }
     
- #globalMessage {position: absolute !important; top: -5px; z-index: 500!important;color: white !important; padding-left: 130px; text-align: left !important; padding-right: 330px; }
- #globalMessage a {color: #ddd !important; text-decoration: none !important; }
+ #globalMessage > * {font: 400 8pt Comfortaa !important;}
+ #globalMessage {font: 400 8pt Comfortaa !important; position: absolute !important; top: 3px; z-index: 500!important;color: white !important; padding-left: 130px; text-align: left !important; padding-right: 330px; }
+ #globalMessage a {color: #b2b6bf !important; text-decoration: none !important; }
  .hide-announcement {font-size: 0px;}
  .hide-announcement:hover:after {color: red !important;}
- .hide-announcement:after {font-size: 10px; !important; color: white !important; position: absolute; left: 130px; top: 13px; content: "x" !important; z-index: 5000 !important;}
- #globalMessage a:hover{color:#aaf !important;}
+ .hide-announcement:after {font-size: 10px; !important; color: transparent !important; position: absolute; left: 116px; top: 2px; content: "Ⓧ" !important; z-index: 5000 !important; padding: 10px;}
+ #globalMessage a:hover{color:#4c7bd9  !important;}
 .thread, .replyContainer {   perspective:500px;
 perspective-origin: 50% 10%;}
 .come-in {
@@ -25,7 +26,7 @@ perspective-origin: 50% 10%;}
 @keyframes come-in {
   to {     transform: translateY(-1px) scale(1); opacity: 1; }
 }
-    #qp {background: transparent!important; border: solid black 0px !important; box-shadow: none!important; margin-right: 10px !important; margin-top: 20px !important;}
+    #qp {background: transparent!important; border: solid black 0px !important; box-shadow: none!important;}
 
 
     
@@ -60,20 +61,20 @@ perspective-origin: 50% 10%;}
                                              color: #999faa !important;
                                              font-size: 9pt !important
                                             }
-    .boardTitle:before {position: absolute; left: 0px; top: -15px;  width: 450px; height: 150px;
+    .boardTitle:before {position: absolute; left: 0px; top: -6px;  width: 450px; height: 150px;
     content: " "; background-image: url('http://i.imgur.com/6E5Q2wv.png');
     background-repeat:no-repeat; padding-top: 10px;
     text-align: left; padding-left: 136px;
     font: normal 900 20pt monkeys and bananas;}
-    .boardTitle:after {position: absolute; left: 0px; top: -16px; right: 0px; height: 100px; border-radius: 4px; border-bottom-left-radius: 0px;
+    .boardTitle:after {position: absolute; left: 0px; top: -6px; right: -5px; height: 100px; border-radius: 4px; border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
-    z-index: -1 ; background-image: url('http://i.imgur.com/55bXerR.jpg'); content: " " ; }
+    z-index: -1 ;; background-color: #484a4e !important; content: " " ; }
     .boardTitle
                                             {
                                              position: absolute;
                                              left: 0px;
                                              right: 0px;
-                                             margin-top: -0px !important;
+                                             margin-top: -10px !important;
                                              margin-right: 0px !important;
                                              margin-bottom: 8px !important;
                                              color: #5c6066 !important;
@@ -88,7 +89,7 @@ perspective-origin: 50% 10%;}
                                             text-align: right !important;
                                              position: absolute !important;
                                             right: 0px; left: 0px;
-                                             margin-right:10px !important; margin-bottom: 3px !important; margin-bottom: -17px!important; margin-left: 10px !important;
+                                             margin-right:15px !important; margin-bottom: 3px !important; margin-bottom: -17px!important; margin-left: 10px !important;
                                              padding-top: 2px !important; padding-bottom: 15px !important;
 
                                              background: #fafafa !important;
@@ -100,17 +101,18 @@ perspective-origin: 50% 10%;}
     .boardSubtitle
                                             {
                                              position: absolute;
+                                             z-index: 4000;
                                              top: 45px;
                                              right: 5px;
                                              color: #5c6066 !important;
                                              color: #fff !important;
-                                             font: bold 8pt Lucida Grande !important;
+                                             font: 600 8pt Comfortaa !important;
                                                                                           text-shadow: 1px 1px 0px #222 !important;
                                             }
     .boardSubtitle a
                                             {
                                              color: #3a78d4 !important;
-                                             color: #eee !important;
+                                             color: #b2b6bf !important;
                                              text-decoration: none !important
                                             }
     .boardSubtitle a:hover                  { color: #3369ba !important }

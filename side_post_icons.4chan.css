@@ -1,0 +1,31 @@
+        .nameBlock {position: absolute !important; left: 0px;top: 17px;padding-left: 5px !important;margin-left: 16px;}
+        .dateTime {position: absolute !important; left: 0px; top: 34px;padding-left: 5px !important;margin-left: 16px;}
+        .postInfo {position: absolute !important; left: -20px; top: 0px; padding: 0px !important;}
+        .fileInfo {position: absolute !important; left: -19px; top: 53px;margin-left: 0px;}
+        .fileText > * {padding: 0px !important; color: white !important;}
+        .nameBlock > * {color: white !important;}
+        .nameBlock, .dateTime, .postInfo >*, .fileInfo >* {background: rgba(10,10,10,.8) !important; color: white !important; border-radius: 3px !important;}
+        .postInfo a, .fileInfo a {color: white !important; padding-left: 5px !important;}
+        .fileInfo a {margin-left: 0px !important;}
+        .container {position: absolute !important; margin-bottom: 0%; margin-right: -100%;}
+        .fileText {padding-left: 0px !important; margin-left: 18px !important;}
+        .postInfo.desktop {margin-left: 0px !important; padding-left: 0px !important;}
+
+        .postInfo.desktop {margin-left: 0px !important; padding-left: 0px !important; width: 100% !important; }
+        .postInfo, .fileInfo {visibility: hidden; pointer-events: none;}   
+        .fileThumb {margin-top: 10px !important; margin-left: 30px !important; margin-bottom: 25px !important; }
+        .postInfo:before {visibility: visible; pointer-events: auto; content: url(http://i.imgur.com/fylFpjd.png);
+        position: absolute; top: 0px; left: 0px;}
+        .postInfo:hover .desktop {visibility: visible; pointer-events: auto; margin-left: 16px;}
+        .dateTime:before {visibility: visible; pointer-events: auto; content: url(http://i.imgur.com/YmRXiLf.png);
+        position: absolute; top: 0px; left: -16px;}
+        .dateTime:hover {visibility: visible; pointer-events: auto;  }
+        .nameBlock:before {visibility: visible; pointer-events: auto; content: url(http://i.imgur.com/3CFir5n.png);
+        position: absolute; top: 0px; left: -16px;}
+        .nameBlock:hover {visibility: visible; pointer-events: auto;  }
+         .fileInfo:before {visibility: visible; pointer-events: auto; content: url(http://i.imgur.com/WfoNrQg.png);
+        position: absolute; top: 0px; left: 2px;}
+        .fileInfo:hover {visibility: visible; pointer-events: auto;  }  
+        
+        a.menu-button.fourchanx-link {position: absolute !important; top: 5px; right: 5px; visibility: visible; pointer-events: auto; background: transparent!important; }
+body {margin-left: 24px !important;}

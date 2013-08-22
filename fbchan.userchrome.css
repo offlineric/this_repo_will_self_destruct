@@ -14,7 +14,9 @@
 #main-window[sizemode="maximized"] #navigator-toolbox {margin-top:-3px !important; }
 
 /*status 4 evar hack  make this to 8px*/
-browser {margin-bottom: 28px !important ; border-left: 4px solid white !important;    
+browser {margin-bottom: 32px !important ;border-bottom: solid red 0px;
+ border-left: 4px solid white !important;  
+ border-right: 0px solid white !important;  
 /*end of weirdness fixes
 
 
@@ -26,7 +28,7 @@ box-shadow: -5px 2px 5px -4px rgba(0,0,0,.1);
 }
 
 /* comment this out if you don't like or use the lesschrome extension to hide the nav-bar */
-#navigator-toolbox {margin-left: 33px !important; margin-right: 2px !important;}
+#navigator-toolbox {margin-left: 33px !important; margin-right: 6px !important;}
 
 
 
@@ -124,7 +126,7 @@ filter: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi
 #go-button {
     display: none !important;
 }
-#navigator-toolbox { margin-right: 4px !important; box-shadow: none !important; z-index: 0 !important;
+#navigator-toolbox { margin-right: 4px !important; box-shadow: none !important; z-index: 0 !important;margin-left: 28px !important;
  }
 #identity-box {
     -moz-appearance: none !important;
@@ -285,7 +287,7 @@ transition: all .2s ease .2s !important; transition-delay: .6s !important; margi
     max-width: 328px !important;
     overflow: hidden !important;
     /*increase visible width by decreasing this margin*/
-    margin-right: -302px !important;
+    margin-right: -304px !important;
     border-top: 1px solid white !important;
 
 
@@ -745,7 +747,7 @@ padding-top: 2px !important; margin-left: -1px !important; margin-right: -1px !i
 border-left: none !important; box-shadow: none !important; }
 #forward-button, #home-button {border-top-left-radius: 0px !important; border-bottom-left-radius: 0px !important;}
 #urlbar {margin-left: -1px !important; margin-right: 0px !important; border-radius: 0px !important;}
-#nav-bar {padding: 0px !important; background: transparent !important; border-bottom: none !important; border-top: 6px solid transparent !important; }
+#nav-bar {padding: 0px !important; background: transparent !important; border-bottom: none !important; border-top: 3px solid transparent !important; }
 #navigator-toolbox {padding: 0px !important; background: transparent !important; border: none !important; }
 #ulrbar, #urlbar * {border-left: none !important; border-right: none !important; box-shadow: none !important;}
 #nav-bar * {box-shadow: none !important;}
@@ -815,8 +817,8 @@ scrollbar > scrollbarbutton {
 }
 
 scrollbar[orient="vertical"] {
-	min-width: 6px !important;
-	max-width: 6px !important;
+	min-width: 7px !important;
+	max-width: 7px !important;
 }
 scrollbar[orient="horizontal"] {
 	min-height: 6px !important;
@@ -850,6 +852,7 @@ scrollbar > slider > thumb:active {
     background-color: #9b9eaf !important;
     border-color: #9b9eaf !important;
 }*/
+
 cscrollbar scrollbarbutton ,
 scrollbar gripper {
 	visibility: collapse;
@@ -859,7 +862,8 @@ scrollbar thumb {
 	-moz-appearance: none !important;
 }
 scrollbar[orient="vertical"] {
-	-moz-margin-start: -4px;
+	-moz-margin-start: -1px;
+background: white !important;
 	min-width: 4px;
 	max-width: 4px;
 }
@@ -879,11 +883,13 @@ scrollbar {
 
 scrollbar thumb {
 	border: none !important;
-	border-radius: 5px !important;
+	border-radius: 4px !important;
 	background-color: #92969b;
     pointer-events: auto !important;
     	            transition: all 1.1s ease .1s !important;
-	opacity: .25;
+	opacity: 1;
+
+
 }
 scrollbar:hover thumb {
 	opacity: 1;
@@ -920,8 +926,8 @@ margin-bottom: -6px !important;
 border: none !important;
 box-shadow: none !important;
 position: absolute !important;
-bottom: 15px !important;
-right: 1px !important;}
+bottom: 18px !important;
+right: 6px !important;}
 
 /*.tabbrowser-tab {transition: background .3s ease .02s !important;} */
 
@@ -935,6 +941,5 @@ right: 1px !important;}
 @keyframes newpost {
   25% {  transform: scale(1.1);   }
 }
-
 
 

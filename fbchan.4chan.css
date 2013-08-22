@@ -3,17 +3,19 @@
 	font-family:droid sans !important;
 }
 
-a.quotelink.inlined {
-	color:#2222aa !important;
-}
+
+a.quotelink.inlined {  outline: 0 !important;opacity: 1 !important;}
 
 .ad-plea-middle, .ad-plea-top, .ad-plea-bottom, a.hide-reply-button, div.sideArrows, div.boardBanner > img, .qr-link, div#absbot, div.stylechanger, div.deleteform, div.navLinks, a.hide-thread-button, div.reply input, div.navLinksBot, input[type="checkbox"]#imageExpand, .hide_reply_button.stub a::before, .postInfo input[type="checkbox"], #toggleMsgBtn, #styleSwitcher, #info, #pass > span, input[type="Submit"], #recaptcha_reload_btn, #recaptcha_switch_audio, #recaptcha_whatsthis {
 	display:none !important;
 }
-
+.inline.lol{padding: 0px !important; margin: 0px !important; height: 0px !important; overflow: visible !important; transition: all .3s ease-in !important; transform:scale(0) !important; opacity: 0 !important; transition: all .3s ease-in !important;}
 #qr-file-spoiler {
 	margin-top:0px !important;
 }
+
+#dump-list-container
+{transition: all .9s ease !important;}
 
 #qr-filename {
 	overflow:hidden !important;
@@ -36,7 +38,7 @@ a.quotelink.inlined {
 }
 
 #custom-board-list {
-	padding-left:6px;
+	padding-left:9px;
 	padding-top:1px;
 	float:left !important;
 	margin-bottom:-1px;
@@ -50,11 +52,16 @@ a.quotelink.inlined {
 	box-shadow:0px 2px 8px rgba(0,0,0,.8) !important;
 	transform: translateX(100%); opacity: 0;
 	animation:sets-in .9s ease forwards; 
+transition: transform .9s ease !important;
+
 }
 
 @keyframes sets-in {
 from {transform: translateX(100%) translateY(-50%); opacity: 0}
   to {transform: translateX(-50%) translateY(-50%); opacity: 1;}}
+
+#fourchanx-settings.lol {transition: all .9s ease !important;
+transform: translateX(100%) translateY(-50%) !important;}
 
 .dialog nav {
 	padding-left:0px;
@@ -123,18 +130,19 @@ fieldset {
 	margin-top:0px !important;
 	margin-bottom:1px !important;
 
-	left:0px !important;
-	right:0px !important;
-    width: 100%;
+
+    width: 100% !important;
 	background:transparent !important;
 	position:relative;
 	max-height:410px !important;
-
+margin-left: auto !important;
+margin-right: auto !important;
 	border:0px !important;
 	border-radius:2px !important;
+
 }
 
-
+.thread > .postContainer:last-child {border-bottom: 4px solid #eee !important;}
 .replyContainer {
 	perspective:500px;
 	perspective-origin:50% 10%;
@@ -147,21 +155,25 @@ fieldset {
 	transform-origin:center;
 	animation:come-in .9s ease-out forwards;
 }
-
+.lol {opacity: 0 !important; transition: opacity .9s ease !important;}
 .come-in:nth-child(odd) {
 	animation-duration:.9s;
 }
 
-#qp > .come-in {
-	transform:translateY(0%);
+#qp {   transform: translateY(-2000px);
 	opacity:.05;
-	animation:come-in .75s ease-out forwards;
+	animation:qp-in .6s ease forwards;
+border-radius: 5px !important;
 }
+@keyframes qp-in { to { transform: translateY(0px); opacity: 1;}}
 
-.inline > .come-in {
+#qp .lol {transform: translateY(2000px) !important;}
+
+.inline {
 	transform:translateY(0%) scale(.5);
 	opacity:.05;
 	animation:come-in .3s ease-out forwards;
+width: 100% !important;
 }
 
 @keyframes come-in {
@@ -224,17 +236,19 @@ fieldset {
 
 #notifications {
 	pointer-events:auto !important;
-    margin-right: 0px;
-
-
+        margin-right: auto !important;
+        margin-left: auto !important;
 }
-#notifications >* {transform: translateX(-300%); opacity: 0;	animation:notes-in .9s ease forwards; 	
-background: #a1b2ff !important; margin-top: 5px !important;	margin-right: 0px !important; 
+#notifications >* {transform: translateY(-3000%); opacity: 0;	animation:notes-in .9s ease forwards; 	
+background: #a1b2ff !important; margin-top: 5px !important;	 
 }
+.notification.lol {transform: translateY(3000%)!important; opacity: 0!important; transition: all .9s ease!important; }
+
 
 @keyframes notes-in {
-  to {transform: translateX(0%); opacity: 1; margin-right: 0px;}}
-
+  to {transform: translateY(0%); opacity: 1; }}
+.entry {animation:entry-in .9s ease forwards; }
+@keyframes entry-in {from{transform:translateY(0%); opacity: 0;} to{transform: translateY(0%); opacity: 1;}}
 
 #notifications .warning {background: #ffa1b2 !important;}
 
@@ -280,17 +294,18 @@ background: #a1b2ff !important; margin-top: 5px !important;	margin-right: 0px !i
 	position:absolute;
 	left:0px;
 	top:-6px;
-	width:450px;
+	width:0px;
 	height:150px;
-	content:"acebookchan ";
+	content:"ourboobchan";
+overflow: visible !important;
 	/*waifu
 	background-image:url('http://i.imgur.com/6E5Q2wv.png'); */
 	background-image:url('http://careers.washington.edu/sites/default/files/all/editors/images/FB-f-Logo__blue_50.png');
-	background-position: 5px 18px;
+	background-position: 15px 28px;
 	background-repeat:no-repeat;
-	padding-top:13px;
+	padding-top:23px;
 	text-align:justify;
-	padding-left:80px;
+	padding-left:90px;
 	font:normal 900 40pt comfortaa;
 	visibility: visible !important;
 }
@@ -315,7 +330,8 @@ background: #a1b2ff !important; margin-top: 5px !important;	margin-right: 0px !i
 	position:absolute;
 	left:0px;
 	right:-10px;
-	margin-top:-10px !important;
+	margin-top:-14px !important;
+        margin-left: -10px !important;
 	padding-top: 17px !important;
 	margin-right:0px !important;
 	margin-bottom:8px !important;
@@ -372,15 +388,27 @@ hr {
 /*	box-shadow: inset 5px 0px 5px -3px #a1c1ff !important;  */
 
 
+border-left: 4px solid #a1c1ff !important;
 border-right: 4px solid #a1c1ff !important;
+
 }
+/*.postContainer.quotesYou .postInfo .name {color: #c1a1ff !important;}*/
+
+.quotelink.deadlink
 
 a.useremail[href*='sage']:last-of-type::after, a.useremail[href*='Sage']:last-of-type::after, a.useremail[href*='SAGE']:last-of-type::after {
+
 	color:#d48e94 !important;
 	font-size:9pt !important;
 	font-weight:bold !important;
 	content:" (sage)" !important;
 }
+/*.quotelink {font-size: 0px;}
+.quotelink:after {font-size: 8pt; font-weight: bold; content: "@anon";}*/
+.quotelink.you {font-size: 0px;}
+.quotelink.you:after {font-size: 8pt; font-weight: bold; content: "@eric"; color: #cc6161;}
+/*.postNum {font-size: 0pt;}
+.postNum a:nth-of-type(2):after {font-size: 9pt; content:"quote";}*/
 
 .useremail .name, .name {
 	color:#5c6066 !important;
@@ -458,9 +486,7 @@ a.replylink {
 	font-size:0px !important;
 }
 
-.post.op .postNum {
-	margin-right:-5px !important;
-}
+
 
 .backlink {
 	color:#7c818a !important;
@@ -530,7 +556,7 @@ a.replylink {
 
 .summary {
 	position:absolute !important;
-	right:6px !important;
+	right:5% !important;
 	padding-bottom:0px !important;
 	color:#888 !important;
 	font-size:9pt !important;
@@ -589,10 +615,13 @@ body {
 	margin-left:0px!important;
 	padding-top:0px !important;
 	padding:0px !important;
-	padding-bottom:15px !important;
-	padding-right:27px !important;
+	padding-bottom:5px !important;
+	padding-right:15px !important;
 	padding-left: 0px !important;
-	background:#fff!important;
+padding: 0px !important;
+	background:#fafafa!important;
+
+
 }
 
 #scroll-marker {
@@ -602,9 +631,9 @@ body {
 #header-bar {
 	margin-top:3px !important;
 	margin-right:0px;
-	margin-left:8px;
-	padding-top:3px!important;
-	padding-bottom:4px !important;
+	margin-left:0px;
+	padding-top:6px!important;
+	padding-bottom:6px !important;
 	color:#222 !important;
 	border-top:0px solid #eee !important;
 	border-bottom:1px solid #ddd!important;
@@ -616,7 +645,7 @@ body {
 	pointer-events:auto !important;
 	border-left:none !important;
 	text-shadow:0px 1px 1px #eee !important;
-transition: box-shadow 1.3s ease .2s !important;
+transition: all 0s linear !important;
 	border-radius:0px;
 	border-bottom-right-radius:4px;
 	border-bottom-left-radius:4px;
@@ -625,22 +654,24 @@ transition: box-shadow 1.3s ease .2s !important;
 	padding-right:0px;
 	height:14px !important;
 	box-shadow: none !important;
-			border-radius:3px;
+			border-radius:0px;
 			background-image: linear-gradient(to left, #FFFFFF 30%, #fff 100%) !important;
 			border-color: transparent !important;
+background: #fff !important;
+    box-shadow: 0px 3px 3px 0px rgba(0,0,0,.1) !important;
 }
 
 #header-bar.fixed {
 	position:fixed !important;
 	top:0px !important;
-    box-shadow: -2px 2px 3px -1px rgba(0,0,0,.1) !important;
-margin-left: 8px !important;
+    box-shadow: 0px 3px 3px 0px rgba(0,0,0,.1) !important;
+margin-left: 0px !important;
 margin-right: 0px !important;
-	margin-top: 3px !important;
-		border-radius:3px;
+	margin-top: 0px !important;
+		border-radius:0px;
 }
-#header-bar.fixed:before {content: " "; width: 100%; position: fixed; height: 3px; background: #fff; 
-left: 0px; top: 0px;}
+/*#header-bar.fixed:before {content: " "; width: 100%; position: fixed; height: 3px; background: #fff; 
+left: 0px; top: 0px;} */
 /*#header-bar.fixed:after {content: " "; width: 2px;  position: fixed; height: 24px; background: #fff; 
 right: 0px; top: 0px; z-index: -100000 !important;}
 */
@@ -837,9 +868,9 @@ a.settingsWindowLink::before {
 }
 
 .replylink {
-	float:left !important;
+	float:right !important;
 	margin-top:-1px !important;
-	margin-right:5px !important;
+	margin-right:0px !important;
 	margin-left:-3px !important;
 	color:transparent !important;
 }
@@ -869,10 +900,12 @@ a.menu-button::after {
 
 a.menu-button:hover:after {
 	background-image:url(http://i.imgur.com/LhvYIZx.png);
+	background-image:url(http://i.imgur.com/fHQm7Aj.png);
+
 }
 
 .post.op .menu_button {
-	margin-top:0px !important;
+	margin-top:3px !important;
 	margin-right:0px !important;
 	margin-left:0px !important;
 }
@@ -887,7 +920,7 @@ a.menu-button:hover:after {
 }
 
 .post.op .menu_button::after {
-	margin-top:2px !important;
+	margin-top:5px !important;
 	color:#bebebe !important;
 }
 
@@ -951,10 +984,10 @@ DIV#boardNavDesktopFoot.desktop {
 .postContainer {
 	position:relative !important;
 	display:table;
-	left:10px !important;
-	width:100% !important;
+	left:0px !important;
+	width:90% !important;
 	margin:0px !important;
-	margin-top:6px !important;
+	margin-top:-1px !important;
 	padding-right:0px!important;
 	padding-left:6px!important;
 	background-color:#fafafa !important;
@@ -962,17 +995,24 @@ DIV#boardNavDesktopFoot.desktop {
 	border-top:solid 1px #eee !important;
 	border-bottom:1px solid #eee !important;
 	border-color: transparent !important;
-
+border-left: 4px solid transparent !important;
+border-right: 4px solid transparent !important;
 	background-image:-moz-linear-gradient(#fbfbfb, #fdfdfd)!important;
 	z-index:0 !important;
-	box-shadow:5px 0px 4px -2px rgba(0,0,0,0.2) !important;
-	border-radius:5px !important;
+	box-shadow:5px 2px 4px -2px rgba(0,0,0,0.2) !important;
+box-shadow: 0px 2px 2px -1px rgba(0,0,0,.2) !important;
+box-shadow: none !important;
+border-color: #eee !important;
+	border-radius:0px !important;
 
 	background:#fff !important;
 	padding-top:3px;
 	padding-bottom:6px;
+margin-left: auto !important;
+margin-right: auto !important;
 }
-
+.opContainer {border-top: 4px solid #eee !important;}
+.post.op {margin-top: -2px !important;}
 .post.op .postMessage {
 	margin-top:0px !important;
 	margin-right:0 !important;
@@ -1004,12 +1044,12 @@ div .postInfo {
 	display:block !important;
 	width:auto !important;
 	margin-top:2px !important;
-	margin-right:2px !important;
+	margin-right:auto !important;
 	margin-bottom:2px;
 	margin-left:-2px !important;
 	padding-top:2px !important;
 	padding-bottom:2px !important;
-	padding-left:5px !important;
+	margin-left:auto !important;
 	border-bottom:0px solid #eceef0 !important;
 	font-size:9pt !important;
 	background:transparent !important;
@@ -1174,7 +1214,7 @@ span.menu-button i {
 
 #shortcuts {
 	position:absolute !important;
-	right:5px !important;
+	right:13px !important;
 	min-width:88px !important;
 	max-width:88px !important;
 	margin:0px !important;
@@ -1273,6 +1313,7 @@ background: transparent !important;
 	border:1px solid rgba(0,0,0,.3)!important;
 
 	box-shadow: -3px -3px 3px rgba(0,0,0,.05)!important;
+    box-shadow: -2px -2px 3px -1px rgba(0,0,0,.1) !important;
     border: none !important;
 	pointer-events:none;
 	border-color: transparent !important;

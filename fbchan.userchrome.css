@@ -360,7 +360,7 @@ overflow: visible !important;
 
 
     background: #c0dbff !important;
-    background: #a1c1ff !important;
+    background: #a1b3ff !important;
 
 
 }
@@ -377,7 +377,7 @@ overflow: visible !important;
 */
 
 
-.tabbrowser-tab:hover {background: #c0dbff !important;     background: #a1c1ff !important; 
+.tabbrowser-tab:hover {background: #c0dbff !important;     background: #a1b3ff !important; 
          }
 .tabbrowser-tab[selected=true] .tab-icon-image {background: #fff !important;border: 0px solid #c0dbff !important;
 overflow: visible !important; min-height: 21px !important;padding: 2px !important; padding-bottom: 3px !important;
@@ -387,7 +387,7 @@ margin-left: -1px !important; border-radius: 0px !important;margin-top: 0px !imp
 .tabbrowser-tab[selected=true] {box-shadow: -3px 0px 3px rgba(0,0,0,.1) !important; border-radius: 0px !important;
 background: #fff !important; border-top-left-radius: 4px !important; border-bottom-left-radius: 4px !important;
 margin-top: 0px !important; padding-top: 0px !important; border: 0px solid white !important; margin-top: 0px !important;
-border-left: 2px solid #a1c1ff !important;}
+border-left: 2px solid #a1b3ff !important;}
 /*how the popup text will look*/
 .tab-text {
     font-size: 8pt !important;
@@ -462,9 +462,9 @@ min-height: 20px !important;
     background: #aaaaff !important;
     background:  #425265 !important;
     background:  #c0dbff !important;
-    background: #a1c1ff !important;
+    background: #a1b3ff !important;
     border: 2px solid   #c0dbff !important;
-    border: 2px solid #a1c1ff !important;
+    border: 2px solid #a1b4ff !important;
     padding-right: 3px !important;
 width: -moz-fit-content !important;
 max-width: 328px !important;
@@ -911,7 +911,7 @@ background: none !important;
 
 }
 #statusbar-display .statuspanel-label {
-background: #a1b2ff !important;
+background: #a1b3ff !important;
 opacity: 1 !important;
 color: #ffffff!important;
 font-weight: bold !important;

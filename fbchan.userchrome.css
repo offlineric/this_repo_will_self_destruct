@@ -302,14 +302,6 @@ background: #fff !important;
 }
 
 
-#tabbrowser-tabs:hover {
-    max-width: 328px !important; 
-
-     width: -moz-fit-content !important;
- min-width: -moz-fit-content !important;
-}
-
-
 .tabbrowser-tab {
     border: none !important;
     border-radius: 0px !important;

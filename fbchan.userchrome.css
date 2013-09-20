@@ -11,10 +11,10 @@
 #main-window[sizemode="maximized"] #nav-bar { padding-top: 6px !important; }
 #main-window[sizemode="maximized"] #home-button {margin-top: 2px !important; margin-bottom: 4px !important;} */
 
-#main-window[sizemode="maximized"] #navigator-toolbox {margin-top:-3px !important; }
+
 
 /*status 4 evar hack  make this to 8px*/
-browser {margin-bottom: 32px !important ;border-bottom: solid red 0px;
+browser {margin-bottom: 36px !important ;border-bottom: solid red 0px;
  border-left: 4px solid white !important;  
  border-right: 0px solid white !important;  
 /*end of weirdness fixes
@@ -25,6 +25,7 @@ border-left: 1px solid #d2d3d4 !important;
 border-bottom: 1px solid #d2d3d4 !important; 
 border-top: 1px solid #d2d3d4 !important; */
 box-shadow: -5px 2px 5px -4px rgba(0,0,0,.1);
+
 }
 
 /* comment this out if you don't like or use the lesschrome extension to hide the nav-bar */
@@ -46,7 +47,7 @@ box-shadow: -5px 2px 5px -4px rgba(0,0,0,.1);
 	}
 	/* position correctly on windows */
 	#main-window .tab-close-button { margin-left: 0px!important;margin-top: -4px!important; }
-	
+	#main-window {font-family: droid sans;}
 	/* show close + hide throbber & favicon on hover */
 	.tabbrowser-tab[selected]:not([pinned]):hover .tab-close-button {
 	  display: block !important;
@@ -194,7 +195,8 @@ transition: all .2s ease .2s !important; transition-delay: .6s !important; margi
 #urlbar-container {margin-top: 1px !important;}
 
 #urlbar {
-    font-size: 8pt !important;
+    font-size: 9pt !important;
+    font-family: droid sans !important;
     color: #595c66 !important;
     border: 1px solid #d2d3d4 !important;
 
@@ -382,7 +384,7 @@ margin-top: 0px !important; padding-top: 0px !important; border: 0px solid white
 border-left: 2px solid #a1b3ff !important;}
 /*how the popup text will look*/
 .tab-text {
-    font-size: 8pt !important;
+    font-weight: 600 !important;
     text-align: left !important;
      max-width: -moz-fit-content !important; 
      width: -moz-fit-content !important;
@@ -391,7 +393,7 @@ border-left: 2px solid #a1b3ff !important;}
 display: table-cell !important;
     margin-top: -3px !important;
     padding: 2px !important;
-    padding-bottom: 3px !important;
+
 
     margin-bottom: 0px !important;
     background: rgba(10,10,10,.8) !important;
@@ -448,8 +450,9 @@ min-height: 20px !important;
 
     opacity: 1 ;
     color: rgba(255,255,255,0.9) !important;
-    font-size: 8pt !important;
-    font-weight: bold !important;
+    font-family: droid sans !important;
+    font-size: 9pt !important;
+    font-weight: 600 !important;
     background: rgba(0,0,0,.6) !important;
     background: #aaaaff !important;
     background:  #425265 !important;
@@ -466,6 +469,8 @@ max-width: 328px !important;
     box-shadow: 4px 4px 4px -2px rgba(10,10,10,.6) !important;
     box-shadow: none !important;
    border-radius: 4px !important;
+   border-top-left-radius: 0px !important;
+   border-bottom-left-radius: 0px !important;
 }
 
 /*.tabbrowser-tab[selected="true"] .tab-text {

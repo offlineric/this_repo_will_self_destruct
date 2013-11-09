@@ -4,7 +4,12 @@
 
 
 
-
+/*#browser:before {content: " "; width: 100%; position: fixed; top: 0px; left: 0px; 
+padding-top: 4px; 
+background-image: -moz-linear-gradient(bottom, #FFFFFF 0%, #ececec 100%) !important;
+background: white !important;
+box-shadow: inset 0px 1px 2px -1px rgba(0,0,0,.4);
+box-shadow: none;}
 
 /*fixes for weirdness on my setup not sure if you will need these
 #main-window[sizemode="maximized"] {margin-top: -2px !important; }
@@ -14,7 +19,7 @@
 
 
 /*status 4 evar hack  make this to 8px*/
-browser {margin-bottom: 36px !important ;border-bottom: solid red 0px;
+browser {margin-bottom: 40px !important ;border-bottom: solid red 0px;
  border-left: 4px solid white !important;  
  border-right: 0px solid white !important;  
 /*end of weirdness fixes
@@ -156,7 +161,7 @@ transition: all .7s ease .2s !important;
     border-bottom-right-radius: 0px ;
         border: none !important;
 
-    margin-top: 0px !important;
+    margin-top: 2px !important;
 
     margin-left: 192px !important;
     margin-left: 0px !important;
@@ -192,7 +197,7 @@ transition: all .2s ease .2s !important; transition-delay: .6s !important; margi
     margin-left: 0px !important;
     border-left: 1px solid #d2d3d4 !important;
 }
-#urlbar-container {margin-top: 1px !important;}
+#urlbar-container {margin-top: 4px !important;}
 
 #urlbar {
     font-size: 9pt !important;
@@ -279,23 +284,24 @@ transition: all .2s ease .2s !important; transition-delay: .6s !important; margi
     background: #ebeced !important;
         background: #ebeced !important;
     background: #f6f6f6 !important;
-    border-radius: 3px !important;
+    border-radius: 0px !important;
     padding-left: 0px !important;
     padding-right: 0px !important;
     padding-bottom: 0 !important;
-    padding-top: 0px !important;
+    padding-top: 4px !important;
     /*increase the width of the popups by making this larger*/
     min-width: 328px !important;
     max-width: 328px !important;
     overflow: hidden !important;
     /*increase visible width by decreasing this margin*/
     margin-right: -304px !important;
-    border-top: 1px solid white !important;
+    border-top: 0px solid white !important;
 
 
 background: #f1f2f3 !important;
 background-image: -moz-linear-gradient(left, #FFFFFF 0%, #aaa 100%) !important;
 background: #fff !important;
+
 
 }
 .tabbrowser-tab > .tab-stack {
@@ -373,6 +379,9 @@ overflow: visible !important;
 
 .tabbrowser-tab:hover {background: #c0dbff !important;     background: #a1b3ff !important; 
          }
+
+
+
 .tabbrowser-tab[selected=true] .tab-icon-image {background: #fff !important;border: 0px solid #c0dbff !important;
 overflow: visible !important; min-height: 21px !important;padding: 2px !important; padding-bottom: 3px !important;
  min-width: 20px !important; padding-left: 3px !important; padding-right: 1px !important;
@@ -420,7 +429,7 @@ margin-right: 0 !important;
 
 /*bookmark*/
 }
-
+.tabbrowser-tab {overflow: visible !important;}
 .tabbrowser-tab[selected=true] .tab-text {
 
     opacity: 1 ;
@@ -428,10 +437,10 @@ margin-right: 0 !important;
   
 
 
-    padding-right: 3px !important;
+    padding-right: 0px !important;
     padding-left: 2px !important;
 
-min-width: 8px !important;
+min-width: 4px !important;
 min-height: 20px !important;
     color: white !important;
     background: white !important;
@@ -440,6 +449,7 @@ min-height: 20px !important;
     border-color: white !important;
     border-radius: 0px !important;
     border: 2px solid white !important;
+
 
 }
 
@@ -588,7 +598,7 @@ max-width: 328px !important;
     border: none !important;
         margin: 0px !important;
     margin-right: 0px !important;
-    margin-top: 0px !important;
+    margin-top: 3px !important;
     margin-bottom: 2px !important;
     
     padding-right: 4px !important;
@@ -728,7 +738,7 @@ max-width: 328px !important;
 }
 
 
-#back-button {border-radius: 0px !important; background: #f6f6f6!important;
+#back-button {border-radius: 0px !important; background: #f6f6f6!important; margin-top: 3px !important;
 padding-top: 2px !important; margin-left: -1px !important; margin-right: -1px !important; padding-left: 2px !important; padding-right: 2px !important;box-shadow: none !important;}
 #forward-button, #reload-button,
 #stop-button,
@@ -741,7 +751,7 @@ padding-top: 2px !important; margin-left: -1px !important; margin-right: -1px !i
 #home-button,
 #alltabs-button {border-radius: 0px !important; background: #f6f6f6!important;
 padding-top: 2px !important; margin-left: -1px !important; margin-right: -1px !important; padding-left: 2px !important; padding-right: 2px !important; border-right: none !important;
-border-left: none !important; box-shadow: none !important; }
+border-left: none !important; box-shadow: none !important; margin-top: 3px !important; }
 #forward-button, #home-button {border-top-left-radius: 0px !important; border-bottom-left-radius: 0px !important;}
 #urlbar {margin-left: -1px !important; margin-right: 0px !important; border-radius: 0px !important;}
 #nav-bar {padding: 0px !important; background: transparent !important; border-bottom: none !important; border-top: 3px solid transparent !important; }
@@ -904,27 +914,25 @@ scrollbar thumb:hover {
 -moz-appearance: none !important;
 border-radius: 4px !important;
 border-top-left-radius: 4px !important;
-background: none !important;
-
-}
-#statusbar-display .statuspanel-label {
+box-shadow: none !important;
 background: #a1b3ff !important;
 opacity: 1 !important;
 color: #ffffff!important;
 font-weight: bold !important;
 padding: 3px 8px !important;
 
-margin-bottom: -6px !important;
+margin: 3px !important;
 
 }
 
 
-#statusbar-display * { 
+statuspanel *{
+box-shadow: none!important;
 border: none !important;
-box-shadow: none !important;
+
 position: absolute !important;
-bottom: 18px !important;
-right: 6px !important;}
+bottom: 23px !important;
+right: 16px !important;}
 
 /*.tabbrowser-tab {transition: background .3s ease .02s !important;} */
 

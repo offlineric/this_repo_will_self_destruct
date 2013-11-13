@@ -1,124 +1,76 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-/*remove all lines that have the word filter in them if you don't like desaturated icons */
-
-
-
-/*#browser:before {content: " "; width: 100%; position: fixed; top: 0px; left: 0px; 
-padding-top: 4px; 
-background-image: -moz-linear-gradient(bottom, #FFFFFF 0%, #ececec 100%) !important;
-background: white !important;
-box-shadow: inset 0px 1px 2px -1px rgba(0,0,0,.4);
-box-shadow: none;}
-
-/*fixes for weirdness on my setup not sure if you will need these
-#main-window[sizemode="maximized"] {margin-top: -2px !important; }
-#main-window[sizemode="maximized"] #nav-bar { padding-top: 6px !important; }
-#main-window[sizemode="maximized"] #home-button {margin-top: 2px !important; margin-bottom: 4px !important;} */
-
-
-
-/*status 4 evar hack  make this to 8px*/
-browser {margin-bottom: 40px !important ;border-bottom: solid red 0px;
- border-left: 4px solid white !important;  
- border-right: 0px solid white !important;  
-/*end of weirdness fixes
-
-
-border-right: 1px solid #d2d3d4 !important; 
-border-left: 1px solid #d2d3d4 !important; 
-border-bottom: 1px solid #d2d3d4 !important; 
-border-top: 1px solid #d2d3d4 !important; */
-box-shadow: -5px 2px 5px -4px rgba(0,0,0,.1);
-
+#main-window {
+  font-family: droid sans;
 }
 
-/* comment this out if you don't like or use the lesschrome extension to hide the nav-bar */
-#navigator-toolbox {margin-left: 33px !important; margin-right: 6px !important;}
+browser {
+  margin-bottom: 40px !important; /*hope we can fix this*/
+  border-bottom: solid red 0px;
+  border-left: 4px solid white !important;  
+  border-right: 0px solid white !important;  
+  box-shadow: -5px 2px 5px -4px rgba(0,0,0,.1);
+}
 
-
-
-	/* swap text & close button */
-	.tabbrowser-tab .tab {
-	  -moz-box-ordinal-group: 3 !important;
-	}
-	.tabbrowser-tab .tab-label {
-	  -moz-box-ordinal-group: 4 !important;
-	}
-	
-	/* hide close button initially */
-	.tabbrowser-tab .tab-close-button {
-	  display: none !important;
-	}
-	/* position correctly on windows */
-	#main-window .tab-close-button { margin-left: 0px!important;margin-top: -4px!important; }
-	#main-window {font-family: droid sans;}
-	/* show close + hide throbber & favicon on hover */
-	.tabbrowser-tab[selected]:not([pinned]):hover .tab-close-button {
-	  display: block !important;
-	}
-	.tabbrowser-tab[selected]:not([pinned]):hover .tab-icon-image {
-	  display: none !important;
-	}
-	.tabbrowser-tab[selected]:not([pinned]):hover .tab-throbber {
-	  display: none !important;
-	}
-	
-	/* trim title padding */
-	.tabbrowser-tab:not([pinned]) .tab-text {
-	  margin-right: 0px !important;
-	}
-
-
-
-    /* hide tab close button */
-    .tabbrowser-tab .tab-close-button {
-      visibility: collapse !important;
-    }
-    .tabbrowser-tab:not([pinned]):hover .tab-close-button.always-right {
-      display: none !important;
-    }
-
-    /* display close tab button on tab hover */
-    .tabbrowser-tab:not([pinned]):hover .tab-close-button {
-      visibility: visible !important; margin-right:3px !important;
-
-    }
-
-
-
+/* swap text & close button */
+.tabbrowser-tab .tab {
+  -moz-box-ordinal-group: 3 !important;
+}
+.tabbrowser-tab .tab-label {
+  -moz-box-ordinal-group: 4 !important;
+}
+/* hide close button initially */
+.tabbrowser-tab .tab-close-button {
+  display: none !important;
+}
+/* show close + hide throbber & favicon on hover */
+.tabbrowser-tab[selected]:not([pinned]):hover .tab-close-button {
+  display: block !important;
+}
+.tabbrowser-tab[selected]:not([pinned]):hover .tab-icon-image {
+  display: none !important;
+}
+.tabbrowser-tab[selected]:not([pinned]):hover .tab-throbber {
+  display: none !important;
+}
+/* trim title padding */
+.tabbrowser-tab:not([pinned]) .tab-text {
+  margin-right: 0px !important;
+}
+/* hide tab close button */
+.tabbrowser-tab .tab-close-button {
+  visibility: collapse !important;
+}
+.tabbrowser-tab:not([pinned]):hover .tab-close-button.always-right {
+  display: none !important;
+}
+/* display close tab button on tab hover */
+.tabbrowser-tab:not([pinned]):hover .tab-close-button {
+  visibility: visible !important; 
+  margin-right:4px !important;
+  margin-left: -1px !important;
+  margin-top: -3px !important;
+}
 .tabbrowser-tab:not([pinned]) .tab-icon-image:not([src]) {
   visibility: visible !important;
 }
-
-
-
-
-/* ::::: (code for Firefox 3.x) :::::  */
-
 tab[busy] .tab-icon-image
 {
   filter: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CgogPGZpbHRlciBpZD0iZ3JleXNjYWxlIj4KCjxmZUNvbG9yTWF0cml4IHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAwICAwICAwICAxIDAiLz4KCiA8L2ZpbHRlcj4KCiA8L3N2Zz4K#greyscale); 
 }
-.tabbrowser-tab:hover .tab-icon-image {filter: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CgogPGZpbHRlciBpZD0iZ3JleXNjYWxlIj4KCjxmZUNvbG9yTWF0cml4IHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAwICAwICAwICAxIDAiLz4KCiA8L2ZpbHRlcj4KCiA8L3N2Zz4K#greyscale);} 
-
-/* ::::: Places Style Throbber (Code for Firefox 4 beta 1-6) ::::: */
-
+.tabbrowser-tab:hover .tab-icon-image {
+  filter: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CgogPGZpbHRlciBpZD0iZ3JleXNjYWxlIj4KCjxmZUNvbG9yTWF0cml4IHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAwICAwICAwICAxIDAiLz4KCiA8L2ZpbHRlcj4KCiA8L3N2Zz4K#greyscale);
+} 
 #navigator-throbber[busy="true"],
 #sidebar-throbber[loading="true"],
 .tabbrowser-tab .tab-icon-image[busy],
 .alltabs-item[busy] > .menu-iconic-left > .menu-iconic-icon {
 /*filter: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CgogPGZpbHRlciBpZD0iZ3JleXNjYWxlIj4KCjxmZUNvbG9yTWF0cml4IHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAwICAwICAwICAxIDAiLz4KCiA8L2ZpbHRlcj4KCiA8L3N2Zz4K#greyscale); */
 }
-
-/* ::::: (Code for Firefox 4 beta 7 +) ::::: */
-
 .tab-throbber[progress], .tab-throbber[busy]
 {
-filter: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CgogPGZpbHRlciBpZD0iZ3JleXNjYWxlIj4KCjxmZUNvbG9yTWF0cml4IHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAwICAwICAwICAxIDAiLz4KCiA8L2ZpbHRlcj4KCiA8L3N2Zz4K#greyscale); 
+  filter: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CgogPGZpbHRlciBpZD0iZ3JleXNjYWxlIj4KCjxmZUNvbG9yTWF0cml4IHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAxLjAwMDAgMS4wMDAwIDEuMDAwMCAwIDAKCiAwICAwICAwICAxIDAiLz4KCiA8L2ZpbHRlcj4KCiA8L3N2Zz4K#greyscale); 
 }
-
-
 /* .tab-icon-image {filter: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQoNCiA8ZmlsdGVyIGlkPSJncmV5c2NhbGUiPg0KDQo8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMC4zMzMzIDAuMzMzMyAwLjMzMzMgMCAwDQoNCiAwLjMzMzMgMC4zMzMzIDAuMzMzMyAwIDANCg0KIDAuMzMzMyAwLjMzMzMgMC4zMzMzIDAgMA0KDQogMCAgMCAgMCAgMSAwIi8+DQoNCiA8L2ZpbHRlcj4NCg0KIDwvc3ZnPg==#greyscale);} */
 
 /* General style */
@@ -128,461 +80,222 @@ filter: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi
 #page-proxy-favicon,
 .scrollbutton-up,
 .scrollbutton-down,
-
 #go-button {
     display: none !important;
 }
-#navigator-toolbox { margin-right: 4px !important; box-shadow: none !important; z-index: 0 !important;margin-left: 28px !important;
- }
-#identity-box {
-    -moz-appearance: none !important;
-    border: none !important;
-    background: transparent !important;
 
-    box-shadow: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    padding-right: 2px !important;
-    padding-left: 0px !important;
-    margin-left: -4px !important;
-    border-radius: 0px !important;
 
+
+#navigator-toolbox {
+  margin-left: 28px !important;
+  margin-right: 4px !important; 
+  margin-top: -3px !important;
+  box-shadow: 0px 5px 5px -4px rgba(0,0,0,.4) !important; 
+  z-index: 0 !important;
+  background: transparent !important; 
+  transition: all .2s ease .6s !important; 
+  border-top-right-radius: 3px !important;
+  padding: 0px !important; 
+  border: none !important; 
 }
 
 #nav-bar {
-transition: all .7s ease .2s !important;
-    background: transparent !important;
-    
-
-    border: 1px solid #d2d3d4 !important;
-    border-top: 6px solid rgba(0,0,0,.1) !important;
-    border-right: 0px solid #d2d3d4 !important;
-    border-bottom-left-radius: 0px ;
-    border-bottom-right-radius: 0px ;
-        border: none !important;
-
-    margin-top: 2px !important;
-
-    margin-left: 192px !important;
-    margin-left: 0px !important;
-    margin-right: 0px !important;
-    padding-right: 8px !important;
-    padding-left: 8px !important;
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
-    max-height: 19px !important;
-    margin-bottom: 0px !important;
-    opacity: 1 !important;
-    z-index: 9001 !important;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px 0px !important;
-    
-
+  transition: all .7s ease .2s !important;
+  background: white !important;
+  border: none !important;
+  margin-top: -2px !important;
+  margin-bottom: 0px !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  max-height: 19px !important;
+  opacity: 1 !important;
+  z-index: 9001 !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 0px !important; 
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+  border-top: 3px solid transparent !important; 
 }
 
-
-
-#navigator-toolbox:after {
-    
-    display: none !important;
+#nav-bar * {
+  box-shadow: 0px 0px 0px transparent !important;
 }
-#navigator-toolbox {background: transparent;    background: rgba(0,0,0,.1)!important; background: #f6f6f6!important;
-transition: all .2s ease .2s !important; transition-delay: .6s !important; margin-top: -3px !important;
-        border-top-right-radius: 3px !important;
-        }
 
-#addon-bar {
-    background: #f6f6f6 !important;
-    border-top: 1px solid #d2d3d4 !important;
-    height: 22px !important;
-    margin-left: 0px !important;
-    border-left: 1px solid #d2d3d4 !important;
+#urlbar-container {
+  margin-top: 4px !important;
 }
-#urlbar-container {margin-top: 4px !important;}
 
 #urlbar {
-    font-size: 9pt !important;
-    font-family: droid sans !important;
-    color: #595c66 !important;
-    border: 1px solid #d2d3d4 !important;
-
-    border-radius: 0px !important;
-    
-    background: #fff !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    padding-left: 4px !important;
-    margin-left: 8px !important;
-    margin-right: 8px !important;
-    margin-bottom: 2px !important;
-    margin-top: -1px !important;
-    height: 19px !important;
-    max-height: 19px !important;
-    min-height: 24px !Important;
-        background: rgba(255,255,255,.9) !important;
-                background: rgba(255,255,255,1) !important;
-    box-shadow: 1px 1px 3px rgba(0,0,0,.1)!important;
-
-    
+  font-size: 9pt !important;
+  color: #595c66 !important;
+  background: white !important;
+  border: 1px solid #d2d3d4 !important;
+  background: #fff !important;
+  padding: 0 !important;
+  padding-left: 4px !important;
+  margin-left: 4px !important;
+  margin-right: 4px !important;
+  margin-bottom: 2px !important;
+  margin-top: -1px !important;
+  max-height: 19px !important;
+  min-height: 24px !important;     
+}
+#ulrbar, #urlbar * {
+  border-left: none !important; 
+  border-right: none !important;   
 }
 
-/*remove left border on urlbar for integration with home button 
-#urlbar {    border-left: 0 !important; 
-    border-top-left-radius: 0px !important;
-    border-bottom-left-radius:0px !important;}*/
+#identity-box {
+  -moz-appearance: none !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  padding-right: 2px !important;
+  padding-left: 0px !important;
+  margin-left: -4px !important;
+  border-radius: 0px !important;
+}
+
+#addon-bar {
+  background: #f6f6f6 !important;
+  border-top: 1px solid #d2d3d4 !important;
+  height: 22px !important;
+  margin-left: 0px !important;
+  border-left: 1px solid #d2d3d4 !important;
+}
+
 
 #searchbar .searchbar-textbox {
-    font-size: 10pt !important;
-    color: #444 !important;
-    border: 1px solid rgba(0,0,0,0.18) !important;
-    border-radius: 4px !important;
-    background: #fff !important;
-    box-shadow: none !important;
-    height: 25px !important;
+  font-size: 10pt !important;
+  color: #444 !important;
+  border: 1px solid rgba(0,0,0,0.18) !important;
+  border-radius: 4px !important;
+  background: #fff !important;
+  box-shadow: none !important;
+  height: 25px !important;
 }
-
-.tabs-newtab-button {
-    margin-right: 6px !important;
-    margin-left: 6px !important;
-    margin-bottom: 4px !important;
-    margin-top: 0px !important;
-    padding-left: 2px !important;
-    padding-right: 2px !important;
-    background: #505257 !important;
-    border: none !important;
-    border-radius: 2px !important;
-}    
-
-.tabs-newtab-button .toolbarbutton-icon {
-    margin-bottom: 1px !important;
-}
-
-.tabs-newtab-button:hover {
-    background: #6f737f !important;
-
-}
-
-.tabs-newtab-button:active {
-    background: #252629 !important;
-        border: 1px solid #222 !important;
-    border-left: 0px solid #d2d3d4 !important;
-    border-right: 0px solid #d2d3d4 !important;
-    box-shadow: inset 0px 0px 2px rgba(0,0,0,0.1) !important;
-    border-top-color: transparent !important;
-    border-bottom-color: rgba(255,255,255,0.1) !important;
-
-}
-
-/*set colors and size of the tabs sidebar here */
 
 #tabbrowser-tabs {
-    background: #37393d !important;
-    border: none !important;
-    border-top: 1px solid #d2d3d4 !important;
-    margin-top: 0px !important;
-    background: #484a4e !important;
-    background: #ebeced !important;
-        background: #ebeced !important;
-    background: #f6f6f6 !important;
-    border-radius: 0px !important;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-    padding-bottom: 0 !important;
-    padding-top: 4px !important;
-    /*increase the width of the popups by making this larger*/
-    min-width: 328px !important;
-    max-width: 328px !important;
-    overflow: hidden !important;
-    /*increase visible width by decreasing this margin*/
-    margin-right: -304px !important;
-    border-top: 0px solid white !important;
-
-
-background: #f1f2f3 !important;
-background-image: -moz-linear-gradient(left, #FFFFFF 0%, #aaa 100%) !important;
-background: #fff !important;
-
-
+  background: #fff !important;
+  border: none !important;
+  margin-top: 2px !important;
+  padding: 0px !important;
+  padding-top: 4px !important;
+  min-width: 328px !important;
+  max-width: 328px !important;
+  overflow: hidden !important;
+  margin-right: -304px !important;  
 }
+
 .tabbrowser-tab > .tab-stack {
   z-index: 1;
   position: relative;
 }
 
-
 .tabbrowser-tab {
-    border: none !important;
-    border-radius: 0px !important;
+  background: transparent;
+  border: none !important;
+  border-top: 1px solid transparent !important;
+  margin: 0px !important;
+  margin-right: 300px !important;
+  margin-left: 2px !important;
+  padding: 0px !important;
+  padding-left: 1px !important;
+  max-height: 9px !important;
+  min-height: 22px !important;
+  width: -moz-fit-content !important;
+  max-width: -moz-fit-content !important; 
+  min-width: -moz-fit-content !important;
+  overflow: visible !important;
+  display: list-item !important;
+ }
 
-    margin: 0px !important;
-
-    padding: 0px !important;
-    border-top: 1px solid transparent !important;
-
-    
-
-
-        background: transparent; /*light example*/
-
-    padding-left: 1px !important;
-    margin-left: 2px !important;
-    margin-top: 0px !important;
-    max-height: 9px !important;
-    min-height: 22px !important;
-         max-width: -moz-fit-content !important; 
-     width: -moz-fit-content !important;
- min-width: -moz-fit-content !important;
-
+.tabbrowser-tab:hover, .tabbrowser-tab:hover[selected=true] {
+  border-radius: 4px !important;
+  margin-right: 0 !important; 
+  background: #a1b3ff!important;
 }
 
-/* vvvvv  cruft probably safe to remove this entirely  vvvvv */
-
-
-
-
-
-.tabbrowser-tab:last-child {
-box-shadow: 0px 2px 2px rgba(0,0,0,.2) !important;
-box-shadow: none !important;
+.tabbrowser-tab[selected=true] .tab-icon-image {
+  background: #fff !important;
+  border: none !important;
+  overflow: visible !important;
+  min-height: 21px !important;
+  min-width: 20px !important; 
+  padding: 2px !important; 
+  padding-bottom: 3px !important;
+  padding-left: 3px !important; 
+  padding-right: 1px !important;
+  margin-left: -1px !important; 
+  margin-top: 0px !important;
 }
 
-.tabbrowser-tab:hover {
-
-overflow: visible !important;
-
-        background: #ffa1b2 ;
-
+.tabbrowser-tab[selected=true] {
+  box-shadow: -3px 0px 3px rgba(0,0,0,.1) !important;
+  border-radius: 0px !important;
+  background: #fff !important; 
+  border-top-left-radius: 4px !important; 
+  border-bottom-left-radius: 4px !important;
+  margin-top: 0px !important; 
+  padding-top: 0px !important; 
+  border: none !important;
+  border-left: 2px solid #a1b3ff !important;
 }
-
-.tabbrowser-tab {display: list-item !important;}
-
-.tabbrowser-tab[selected=true]:hover {
-
-
-    background: #c0dbff !important;
-    background: #a1b3ff !important;
-
-
-}
-.tabbrowser-tab[selected=true] {background: #fff !important;}
-/*
-.tabbrowser-tab:hover:nth-of-type(3n+0), .tabbrowser-tab[selected=true]:nth-of-type(3n+0),
-.tabbrowser-tab[selected=true]:hover:nth-of-type(3n+0) {background: #c0dbff !important;}
-
-.tabbrowser-tab:hover:nth-of-type(3n+1), .tabbrowser-tab[selected=true]:nth-of-type(3n+1),
-.tabbrowser-tab[selected=true]:hover:nth-of-type(3n+1) {background: #ffa1b2 !important;}
-
-.tabbrowser-tab:hover:nth-of-type(3n+2), .tabbrowser-tab[selected=true]:nth-of-type(3n+2),
-.tabbrowser-tab[selected=true]:hover:nth-of-type(3n+2) {background: #b2ffa1 !important;}
-*/
-
-
-.tabbrowser-tab:hover {background: #c0dbff !important;     background: #a1b3ff !important; 
-         }
-
-
-
-.tabbrowser-tab[selected=true] .tab-icon-image {background: #fff !important;border: 0px solid #c0dbff !important;
-overflow: visible !important; min-height: 21px !important;padding: 2px !important; padding-bottom: 3px !important;
- min-width: 20px !important; padding-left: 3px !important; padding-right: 1px !important;
-margin-left: -1px !important; border-radius: 0px !important;margin-top: 0px !important;}
-
-.tabbrowser-tab[selected=true] {box-shadow: -3px 0px 3px rgba(0,0,0,.1) !important; border-radius: 0px !important;
-background: #fff !important; border-top-left-radius: 4px !important; border-bottom-left-radius: 4px !important;
-margin-top: 0px !important; padding-top: 0px !important; border: 0px solid white !important; margin-top: 0px !important;
-border-left: 2px solid #a1b3ff !important;}
 /*how the popup text will look*/
 .tab-text {
-    font-weight: 600 !important;
-    text-align: left !important;
-     max-width: -moz-fit-content !important; 
-     width: -moz-fit-content !important;
- min-width: -moz-fit-content !important;
-    margin-left: 0px !important;
-display: table-cell !important;
-    margin-top: -3px !important;
-    padding: 2px !important;
-
-
-    margin-bottom: 0px !important;
-    background: rgba(10,10,10,.8) !important;
-    background: transparent !important; 
-    pointer-events: none !important;
-    border-radius: 4px !important;
-    border-top-left-radius: 0px !important;
-    border-bottom-left-radius: 0px !important;
-    
-    opacity: 0 ;
-    margin-left: -3px !important;
-
-}
-.tabbrowser-tab {    margin-right: 300px !important;
-   min-width: 0px !important;
-   overflow: hidden !important;
-        max-width: -moz-fit-content !important; 
-
-     width: -moz-fit-content !important;
- min-width: -moz-fit-content !important;
-}
-.tabbrowser-tab:hover {border-radius: 4px !important;
-margin-right: 0 !important; 
-
-/*bookmark*/
-}
-.tabbrowser-tab {overflow: visible !important;}
-.tabbrowser-tab[selected=true] .tab-text {
-
-    opacity: 1 ;
-
+  font-weight: 600 !important;
+  text-align: left !important;
+  max-width: -moz-fit-content !important; 
+  width: -moz-fit-content !important;
+  min-width: -moz-fit-content !important;
+  display: table-cell !important;
+  margin-top: -3px !important;
+  margin-bottom: 0px !important;
+  margin-left: -3px !important;
+  padding: 2px !important;
+  background: transparent !important; 
+  pointer-events: none !important;
+  border-radius: 4px !important;
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
   
-
-
-    padding-right: 0px !important;
-    padding-left: 2px !important;
-
-min-width: 4px !important;
-min-height: 20px !important;
-    color: white !important;
-    background: white !important;
-    margin-left: -5px !important;
-    margin-top: 0px !important;
-    border-color: white !important;
-    border-radius: 0px !important;
-    border: 2px solid white !important;
-
-
 }
-
-
-
-
+.tabbrowser-tab[selected=true] .tab-text {
+  padding-right: 0px !important;
+  padding-left: 2px !important;
+  min-width: 4px !important;
+  min-height: 20px !important;
+  margin-left: -5px !important;
+  margin-top: 0px !important;
+}
 .tabbrowser-tab:hover .tab-text {
-
-    opacity: 1 ;
-    color: rgba(255,255,255,0.9) !important;
-    font-family: droid sans !important;
-    font-size: 9pt !important;
-    font-weight: 600 !important;
-    background: rgba(0,0,0,.6) !important;
-    background: #aaaaff !important;
-    background:  #425265 !important;
-    background:  #c0dbff !important;
-    background: #a1b3ff !important;
-    border: 2px solid   #c0dbff !important;
-    border: 2px solid #a1b4ff !important;
-    padding-right: 3px !important;
-width: -moz-fit-content !important;
-max-width: 328px !important;
-    text-shadow: 1px 1px 1px black !important;
-    text-shadow: none !important;
-    color: white !important;
-    box-shadow: 4px 4px 4px -2px rgba(10,10,10,.6) !important;
-    box-shadow: none !important;
-   border-radius: 4px !important;
-   border-top-left-radius: 0px !important;
-   border-bottom-left-radius: 0px !important;
+  color: rgba(255,255,255,0.9) !important;
+  color: white !important;
+  font-family: droid sans !important;
+  font-size: 9pt !important;
+  font-weight: 600 !important;
+  background: #a1b3ff !important;
+  border: 2px solid #a1b4ff !important;
+  padding-right: 3px !important;
+  width: -moz-fit-content !important;
+  max-width: 328px !important;
 }
 
-/*.tabbrowser-tab[selected="true"] .tab-text {
-    color: #595c66 !important;
-    color: #fff !important;
-        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAUCAYAAAC58NwRAAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QUZAScaoeATHAAAAE9JREFUKM+dkjkOACAMw1z+/+eychVIMttSj4CQzMxQYIBQ4C9hhJ/CCl+FE1wKFXwUbvAmvOBJ+IEBGmL8kaylrbNaj7OqYZXPqrf62E3qA/lLyCad0sgAAAAASUVORK5CYII=");
-        height: 100px ;
-        margin-right: 0px !important;
-        padding-top: 5px !important;
-        padding-right: 10px !important;
-    background-size: 12px 20px;
-    background-position: right center;
-    background-repeat: no-repeat;
-}*/
+.tab-icon-image {
+  margin-top: -2px !important;
+}
 
-
-
-
-.tab-icon-image {margin-top: -2px !important;}
-/*Disable FXChrome tab background for tabs*/
 .tab-content {
-    border: none !important;
-    border-width: 0 0 !important;
-        padding-bottom: 5px !important;
-    -moz-margin-start: 0 !important;
-    -moz-margin-end: 0 !important;
+  border: none !important;
+  border-width: 0 0 !important;
+  padding-bottom: 5px !important;
+  -moz-margin-start: 0 !important;
+  -moz-margin-end: 0 !important;
 }
 
-/*Remove the padding caused by the left and right arrows*/
-.tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
-    -moz-padding-start: 0 !important;
-    -moz-padding-end: 0 !important;
-}
-
-.toolbar-primary {
-    margin-left: -2px !important;
-    margin-right: -2px !important;
-    border: none !important;
-    display: inherit !Important;
-
-}
-
-/* Location bar buttons */
-#urlbar-reload-button,
-#urlbar-stop-button,
-#urlbar-go-button {
-    padding-top: 2px !important;
-    margin-top: -1px !important;
-    border: none !important;
-    border-left: 1px solid #d2d3d4 !important;
-    border-top: 1px solid #d2d3d4 !important;
-}
-
-#urlbar-reload-button:hover,
-#urlbar-stop-button:hover,
-#urlbar-go-button:hover {
-    background: transparent !important;
-}
-
-#back-button {
-    padding-top: 1px !important;
-    margin: 8px !important;
-
-    border: none !important;
-
-    box-shadow: none !important;
-        margin: 0px !important;
-    margin-right: 8px !important;
-    padding-right: 4px !important;
-    padding-left: 4px !important;
-        background: rgba(255,255,255,.9) !important;
-                background: rgba(255,255,255,1) !important;
-    box-shadow: 1px 1px 3px rgba(0,0,0,.1) !important;
-    margin-top: 0px !important;
-    margin-bottom: 2px !important;
-    
-
-    border: none !important;
-        border: 1px solid #d2d3d4 !important;
-        border-radius: 2px !important;
-
-    
-}
-
-#forward-button {
-    padding-top: 1px !important;
-    
-    margin: 0px !important;
-    margin-right: 0px !important;
-    margin-top: 0px !important;
-    margin-bottom: 2px !important;
-    
-    padding-right: 4px !important;
-    padding-left: 4px !important;
-        background: rgba(255,255,255,.9) !important;
-                background: rgba(255,255,255,1) !important;
-    box-shadow: 1px 1px 3px rgba(0,0,0,.1) !important;
-    border: none !important;
-        border: 1px solid #d2d3d4 !important;
-        border-radius: 2px !important;
-}
- 
 #reload-button,
 #stop-button,
 #downloads-indicator,
@@ -592,199 +305,23 @@ max-width: 328px !important;
 #bookmarks-menu-button,
 #bookmarks-button,
 #home-button,
-#alltabs-button {
-    margin: 8px !important;
-    background: transparent !important;
-    border: none !important;
-        margin: 0px !important;
-    margin-right: 0px !important;
-    margin-top: 3px !important;
-    margin-bottom: 2px !important;
-    
-    padding-right: 4px !important;
-    padding-left: 4px !important;
-        background: rgba(255,255,255,.9) !important;
-                background: rgba(255,255,255,1) !important;
-    box-shadow: 1px 1px 3px rgba(0,0,0,.1) !important;
-    border: none !important;
-        border: 1px solid #d2d3d4 !important;
-        border-radius: 2px !important;
+#alltabs-button,
+#back-button,
+#forward-button
+{
+  padding: 0px !important;
+  margin: 0px !important;
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+  border: none!important;
+  opacity: .6;
 }
-#home-button {z-index: 20 !important; transition: all .0001s ease .00001s !important;margin-left: 8px !important;}
-
-/* Icon replacements */
-.tabs-newtab-button .toolbarbutton-icon {
-    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUJEi4LVOvCEQAAACdJREFUOMtjYBje4D8U4FPDRKklA28AI7qfidLEyMhINReMxsKwAACAUhQA+0tI1AAAAABJRU5ErkJggg==) !important;
-    -moz-image-region: rect(0,16px,16px,0) !important;
-    opacity: 0.4;
+#downloads-button {
+  padding-top: 1px !important;
 }
 
-.tabs-newtab-button:hover .toolbarbutton-icon {
-    opacity: 0.9;
-
-}
-
-#back-button .toolbarbutton-icon {
-    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAbwBzAH90LOFHAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFB0SKMNDqQAAAMdJREFUOMvd0T1KA1EYheHHnz2IkURQGUifVjCmcA1WLmGKWcBwF3CLW7sEC7OBkDKNNonoEqI2rkCwuYXgOMlUgl99zsvHe/jr29kUKKv6AHc4TzH8yO9vKB9ihiFemjK7LeUTLHL5CeOtAWVVn2KOYywxSTG8bQUoq/oslwd4wEWK4f23T5s+uEUfn7hJMXy0eWoCXOMZe7gvq7rXCZBieMVlFldg3gZplJiFTbD6BjnqNGMWd5X3LzDtBMiQdd7/ESP/874ABsgzDKHtShEAAAAASUVORK5CYII=) !important;
-    -moz-image-region: rect(0,16px,16px,0)!important;
-}
-
-#back-button:hover .toolbarbutton-icon {
-    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QATAB7ANnD6+P2AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFB4RmudB0AAAAMRJREFUOMvd0T1KA1EYheFH4x7ESBRU5pLeNhBNYTMbsHIhU99VuIQUSXHbkNLGNFGUWYE/jSsQbG4hOE4yleBXn/Py8R7++nY2Bcqq3scUoxTDj/zehvIBFhjiuSmz21I+wV0uP+Jia0BZ1adY4hhrTFIMb1sByqo+y+Uj3GOcYnj/7dOmD24xwCduUgwfbZ6aANd4Qg+zsqr7nQAphldcZnEFlm2QRolZ2AQP3yCHnWbM4q7y/gXmnQAZ8pL3X+Hc/7wv+a0zDI26lVUAAAAASUVORK5CYII=) !important;
-    -moz-image-region: rect(0,16px,16px,0)!important;
-    transition: all 0.1s ease 0s;
-}
-
-#forward-button .toolbarbutton-icon {
-    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QATAB7ANnD6+P2AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFB4ttYg9VwAAANhJREFUOMvd0qFKBGEUxfHfqtVgWVhYm6uy1SKIsCCIxeSDTJgHmPmSGL7wvYcPYHLFoIhBERRBmyJoEZvNLWMRd52xCN54Lv/DuYfLX0/rOzHLi3dcYCfF8DTJYGqMfotVHGV50f2NwSau0MNJlhcLjQxSDC8Y4BzzGGZ50WuSQIrhtUpyhi6Os7zo1yrxS6GLuMYMTudmW2tlWX587qd/gDs4QBv32N7bDW+1TqjgQyzjBusphoe6f9DBEEtV/I0Uw3OTEvcr+A5b4+BJBiu4xCDF8Oh/zwg3/zkSZURStQAAAABJRU5ErkJggg==) !important;
-    -moz-image-region: rect(0,16px,16px,0)!important;
-}
-
-#forward-button:hover .toolbarbutton-icon {
-    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QATAB7ANnD6+P2AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFB8yIZsB4wAAAMlJREFUOMvd0rFKA0EYxPFffAoDsTOs2NrYCEFBLLaz90WuuWbfwkew3NoEC0EsFEFx0S5B0EZLCwubKySYM2cjOOXA/Bm++fhr9b4zY1XecYXDnMJTG2BlgX+PbUxiVQa/AezjBkOcx6qsdwLkFF4wwiXWMI5VGXZpIKfw2jS5wABnsSqbSwMayBuO8IFVHNd13ftxhS9r9HGKDTxiN6cwXarBXPgOO/Phtj/oY4yAW+zlFJ67HPGkCT/gYFG4DbCFa4xyCjP/W586Fzj9IMRCdQAAAABJRU5ErkJggg==) !important;
-    -moz-image-region: rect(0,16px,16px,0)!important;
-    transition: all 0.1s ease 0s;
-}
-
-#downloads-indicator-icon {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QATAB7ANnD6+P2AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFCEqczKCyAAAALtJREFUOMvtk60KAlEQhT+1+gSC72BTTFotNsEXUEw33Ae4zAPcMFG7D7DRKAZ/isVoEzQviEnQsmFZ98qCiMWBCTNzznCYH/i1lUIFY90jHauXXGz5UwX/BqktGOumwKggb6ZexlkFEyAqQI4S7OsdGOuqwApoBMg7oKtebsFDMtbVgA1Qz5ROQFO9XN4OUb2cgT5wTaVjoJclB7egXvbAALgnPlQvhzxsJTSp7Xp5bLU7MbBQL/OvfeMTYnMuKqXfcPEAAAAASUVORK5CYII=)!important;
-    -moz-image-region: rect(0,16px,16px,0) !important;
-}
-
-    #home-button {margin-right: 0px !important;}    
-
-
-
-
-/* The hover state for the downloads button doesn't work! Neither does the notification icon */
-#downloads-indicator:hover #downloads-indicator-icon {
-    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QATAB7ANnD6+P2AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFCIB9KMoSwAAAK1JREFUOMvtky8KQkEQxn+aPYFgnmozW2XBJngBxaAX2DyH0Fs8mBtYxGKxbH6gWRCToOWFZXXliYjFgQnz5xs+5puBX1sjV3A+3OLYVJ72Nj9l8B8QqeB8WAKTmriVqUxTBjOgqAEuqt7HO3A+tIA10M2At0DfVC7ZQ3I+tIEN0ElKJdAzlePLJZrKARgC5yh9AgYpOKuCqeyAEXCtfGwq+7clcj4snA/zr37jHVXTKXlqqFodAAAAAElFTkSuQmCC) !important;
-    -moz-image-region: rect(0,16px,16px,0)!important;
-    transition: all 0.1s ease 0s;
-}
-
-#downloads-indicator-notification {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QATAB7ANnD6+P2AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFCIB9KMoSwAAAK1JREFUOMvtky8KQkEQxn+aPYFgnmozW2XBJngBxaAX2DyH0Fs8mBtYxGKxbH6gWRCToOWFZXXliYjFgQnz5xs+5puBX1sjV3A+3OLYVJ72Nj9l8B8QqeB8WAKTmriVqUxTBjOgqAEuqt7HO3A+tIA10M2At0DfVC7ZQ3I+tIEN0ElKJdAzlePLJZrKARgC5yh9AgYpOKuCqeyAEXCtfGwq+7clcj4snA/zr37jHVXTKXlqqFodAAAAAElFTkSuQmCC) !important;
-    -moz-image-region: rect(0,16px,16px,0) !important;
-}
-
-#urlbar-reload-button .toolbarbutton-icon,
-#reload-button .toolbarbutton-icon {
-    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAWQBcAGYNNwV8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFCUVoThq8QAAASNJREFUOMvN0r9qVEEUBvDfLsFYSGCFVNEqzRYzQwJCthfTpcobaGNAC99ikyJ5hlhGsBFssk+QiIR7r0HbQNJKSKFuszYTuGzu3qydB4YzM4fvO9/5wz1WlNVRUVZPZsU7cxBM8At7GKYYfrcSFGX1AC/xCqvo1cLf8TbFMLr9WJgCr+AT1mcIejRFqFsDP8TnDL7ANpZzeIxd9FMMH+oEdQU7SBm8lmL4mYlHeJNi+NHaxKKsTvEM2ymGj+a0bu3ez/7YP9hCg5pJy0iXcI2bFMPStILz7J+3JNzM/ltTCYfZD4uy6jVkf4z9/Hzf1MRFnNQm8S73o4MXOMBTnGEjxTC+s4lzLNJXbKUYrppKkGK4xCDvxBf8yecUrzGog/8P+wtOP1JABqAOIwAAAABJRU5ErkJggg==) !important;
-    -moz-image-region: rect(0,16px,16px,0)!important;
-        list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAWQBcAGYNNwV8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFCUvZzSzQwAAAS1JREFUOMvN0r1KXVEQBeDPH8RCBBMEQa3S2CiKeYOgnZXVgVMpHAiawmewUQvtN5GQsGFDBJtAGn2DEL0EI6a1sBWxSAgE02zhcDler53TrL1nmDVrfnjEirL6XJTVxEPxni4I7vAbO9hKMfzpSFCU1QBWsIpXGKmFL/AuxXB87+hvSx7HF8w9IGiojVBvLXkQX3PyJZYxmsN/sY2pFMNBnaCu4C1mcvJsiuE6Ex9jPcXwq+MQi7L6htdYTjEc6tJ6a++pjEeeYP0Nau46rHQYN7hNMQy3KzjP+KZDwcWMP5ta+JhxqyirkYbqL7Cbv5+aWniPKm+iVZTVRp5HDxawh0m0sN94iV0c0gmWUgxX946+evTsx/fb6Zn5D7jCGF7iH06xibUUw41nZf8BvvpOA395qr0AAAAASUVORK5CYII=) !important;
-    -moz-image-region: rect(0,16px,16px,0)!important;
-        opacity: 1.0 !important;
-}
-
-#urlbar-reload-button:hover .toolbarbutton-icon,
-#reload-button:hover .toolbarbutton-icon {
-    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAWQBcAGYNNwV8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFCUvZzSzQwAAAS1JREFUOMvN0r1KXVEQBeDPH8RCBBMEQa3S2CiKeYOgnZXVgVMpHAiawmewUQvtN5GQsGFDBJtAGn2DEL0EI6a1sBWxSAgE02zhcDler53TrL1nmDVrfnjEirL6XJTVxEPxni4I7vAbO9hKMfzpSFCU1QBWsIpXGKmFL/AuxXB87+hvSx7HF8w9IGiojVBvLXkQX3PyJZYxmsN/sY2pFMNBnaCu4C1mcvJsiuE6Ex9jPcXwq+MQi7L6htdYTjEc6tJ6a++pjEeeYP0Nau46rHQYN7hNMQy3KzjP+KZDwcWMP5ta+JhxqyirkYbqL7Cbv5+aWniPKm+iVZTVRp5HDxawh0m0sN94iV0c0gmWUgxX946+evTsx/fb6Zn5D7jCGF7iH06xibUUw41nZf8BvvpOA395qr0AAAAASUVORK5CYII=) !important;
-    -moz-image-region: rect(0,16px,16px,0)!important;
-    transition: all 0.1s ease 0s;
-}
-
-#urlbar-stop-button .toolbarbutton-icon,
-#stop-button .toolbarbutton-icon {
-    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAWQBcAGYNNwV8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFCYTY3acBwAAALNJREFUOMvtkkEOwVAURQ8RYmBkAd3A/38Jpo0gUcywOmJEmiAShpbQdhVirkyY3IFUqQX0jV5u7nv/vJsPZVWyQhQnZ+AKTJ01N2lNYAW0nTWdd38tZ+kFGANhFCdDaSHgA+usOW/BDGhpYCNKHzgB88IThFzXawNJO2DirHlkvdUf+Ty/9IUhNoTeAw7ydIG9KO5FBEsNHxXmSH0fWPxzggdsgcBZkzprUiBQDl758z/rBbY4K1u1orxQAAAAAElFTkSuQmCC) !important;
-    -moz-image-region: rect(0,16px,16px,0)!important;
-        list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAWQBcAGYNNwV8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFCYlrMwJngAAALFJREFUOMvtkrEOAUEURQ8RolD5gP0T7UaQWDQbo92PmtbENGQTRELpc0RvaWhuIWtZH7Cverm57815NwNV1fJCbJIzcAXm3tmbtDawArre2d67v1Gw9AJMgTQ2yVhaCoTAOm8uWmCAjgY2ogyBE7AoPUHITb02krQDZt7ZR95b/5HP80tfGmJL6APgIE8f2IviXkbgNHxUmBP1Q2D5zwkBsAUi72zmnc2ASDkE1c//rBfBeiy5rGCXCAAAAABJRU5ErkJggg==) !important;
-    -moz-image-region: rect(0,16px,16px,0)!important;
-    
-    opacity: 1.0 !important;
-}
-
-#urlbar-stop-button:hover .toolbarbutton-icon,
-#stop-button:hover .toolbarbutton-icon {
-    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAWQBcAGYNNwV8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFCYlrMwJngAAALFJREFUOMvtkrEOAUEURQ8RolD5gP0T7UaQWDQbo92PmtbENGQTRELpc0RvaWhuIWtZH7Cverm57815NwNV1fJCbJIzcAXm3tmbtDawArre2d67v1Gw9AJMgTQ2yVhaCoTAOm8uWmCAjgY2ogyBE7AoPUHITb02krQDZt7ZR95b/5HP80tfGmJL6APgIE8f2IviXkbgNHxUmBP1Q2D5zwkBsAUi72zmnc2ASDkE1c//rBfBeiy5rGCXCAAAAABJRU5ErkJggg==) !important;
-    -moz-image-region: rect(0,16px,16px,0)!important;
-    transition: all 0.1s ease 0s;
-}
-
-#urlbar-go-button .toolbarbutton-icon,
-#go-button .toolbarbutton-icon {
-    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAWQBcAGYNNwV8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFCMorwqBZgAAAKNJREFUOMvNk70JAkEQhT9FrMISZqYAC7gCDPUKEC6zAlswFMHAyOhaEIyMd7cPQ4XDn0iQVY5lD8GXzbzhGx7DwK/lfBi3+f0ExsH5UHYBDIGd82H5zewlRHi8lVtgbirNByAabFMNlKZySY0QawKcnA+jXACAAZsugCMwzQXsgcJUzjlXWAOVqdxejUHi1juwMJVVbKQArsDMVOrcXyj4az0BwZQrx/cLT+4AAAAASUVORK5CYII=) !important;
-    -moz-image-region: rect(0,16px,16px,0)!important;
-        list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAWQBcAGYNNwV8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFCQiAJ7+vwAAAKFJREFUOMvNkz0KAkEMhT9FPIVn8AAeYA9gN5p6EOw8gVewNIKFBGK1VxCs9jaWCuJPJcgqyzCL4OuSF77wCIFfK0gcNfndBMYhSJQ2gD6wCxKX38xOQoTHW7kFZm56/QDUBptUAuKm59QIdY2BKkgc5AIAhsCmDeAITHIBe6Bw01POFdbA3E1vr0YvcesdWLjpqm6kAC7A1E3L3F8o+Gs9ARChKQsCJM/KAAAAAElFTkSuQmCC) !important;
-    -moz-image-region: rect(0,16px,16px,0)!important;
-    opacity: 1.0 !important;
-}
-
-#urlbar-go-button:hover .toolbarbutton-icon,
-#go-button:hover .toolbarbutton-icon {
-    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAWQBcAGYNNwV8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFCQiAJ7+vwAAAKFJREFUOMvNkz0KAkEMhT9FPIVn8AAeYA9gN5p6EOw8gVewNIKFBGK1VxCs9jaWCuJPJcgqyzCL4OuSF77wCIFfK0gcNfndBMYhSJQ2gD6wCxKX38xOQoTHW7kFZm56/QDUBptUAuKm59QIdY2BKkgc5AIAhsCmDeAITHIBe6Bw01POFdbA3E1vr0YvcesdWLjpqm6kAC7A1E3L3F8o+Gs9ARChKQsCJM/KAAAAAElFTkSuQmCC) !important;
-    -moz-image-region: rect(0,16px,16px,0)!important;
-    transition: all 0.1s ease 0s;
-}
-
-/* Change icons' opacity so it fits with the rest of the theme */ 
-#appmenu-toolbar-button .toolbarbutton-icon, 
-#tabview-button .toolbarbutton-icon,
-#bookmarks-menu-button .toolbarbutton-icon,
-#bookmarks-button .toolbarbutton-icon,
-#home-button .toolbarbutton-icon,
-#alltabs-button .toolbarbutton-icon {
-    opacity: 0.75 !important;
-}
-#home-button .toolbarbutton-icon { transform: scale(.9) !important; }
-#appmenu-toolbar-button:hover .toolbarbutton-icon, 
-#tabview-button:hover .toolbarbutton-icon,
-#bookmarks-menu-button:hover .toolbarbutton-icon,
-#bookmarks-button:hover .toolbarbutton-icon,
-#home-button:hover .toolbarbutton-icon,
-#alltabs-button:hover .toolbarbutton-icon {
-    opacity: 0.9 !important;
-    transition: all 0.1s ease 0s;
-}
-
-
-#back-button {border-radius: 0px !important; background: #f6f6f6!important; margin-top: 3px !important;
-padding-top: 2px !important; margin-left: -1px !important; margin-right: -1px !important; padding-left: 2px !important; padding-right: 2px !important;box-shadow: none !important;}
-#forward-button, #reload-button,
-#stop-button,
-#downloads-indicator,
-#downloads-button,
-#appmenu-toolbar-button, 
-#tabview-button,
-#bookmarks-menu-button,
-#bookmarks-button,
-#home-button,
-#alltabs-button {border-radius: 0px !important; background: #f6f6f6!important;
-padding-top: 2px !important; margin-left: -1px !important; margin-right: -1px !important; padding-left: 2px !important; padding-right: 2px !important; border-right: none !important;
-border-left: none !important; box-shadow: none !important; margin-top: 3px !important; }
-#forward-button, #home-button {border-top-left-radius: 0px !important; border-bottom-left-radius: 0px !important;}
-#urlbar {margin-left: -1px !important; margin-right: 0px !important; border-radius: 0px !important;}
-#nav-bar {padding: 0px !important; background: transparent !important; border-bottom: none !important; border-top: 3px solid transparent !important; }
-#navigator-toolbox {padding: 0px !important; background: transparent !important; border: none !important; }
-#ulrbar, #urlbar * {border-left: none !important; border-right: none !important; box-shadow: none !important;}
-#nav-bar * {box-shadow: none !important;}
-
-
-#back-button, #forward-button, #reload-button,
-#stop-button,
-#downloads-indicator,
-#downloads-button,
-#appmenu-toolbar-button, 
-#tabview-button,
-#bookmarks-menu-button,
-#bookmarks-button,
-#home-button,
-#alltabs-button,#urlbar, #urlbar *{ transition: background .3s ease .02s !important; border-color: #d2d3d4 !important; border-radius: 0px !important;
-background: #fff !important;}
-
-#urlbar-reload-button,
-#urlbar-stop-button,
-#urlbar-go-button {background: #fff !important; border-left: 1px solid #d2d3d4 !important; }
-#back-button {margin-left: 0px !important;border-left: 1px solid #d2d3d4 !important;
-border-top-left-radius: 4px !important; border-bottom-left-radius: 4px !important;}
-
-
-
-#urlbar-reload-button:hover,
-#urlbar-stop-button:hover,
-#urlbar-go-button:hover,
-#forward-button:hover, #reload-button:hover,
-#stop-button:hover, #back-button:hover,
+#reload-button:hover,
+#stop-button:hover,
 #downloads-indicator:hover,
 #downloads-button:hover,
 #appmenu-toolbar-button:hover, 
@@ -792,159 +329,87 @@ border-top-left-radius: 4px !important; border-bottom-left-radius: 4px !importan
 #bookmarks-menu-button:hover,
 #bookmarks-button:hover,
 #home-button:hover,
-#alltabs-button:hover
-{background:  #fff !important;}
-#appmenu-toolbar-button {border-right: 2px solid #d2d3d4 !important; border-top-right-radius: 4px !important; border-bottom-right-radius: 4px !important;}
-
-
-#back-button .toolbarbutton-icon {visibility: visible;}
-
-
-
-
-/* Make tabs fit all horizontal width available, no matter how many there are 
-and make Firefox tabs close properly even though max-width is overridden */
-/*.tabbrowser-tab:not([pinned])[fadein] {
-    max-width: 5000px !important;
-    min-width: 1px !important;
-}*/
-
-/* Scrollbars 
-
-scrollbar,
-scrollbar > slider, 
-scrollbar > slider > thumb, 
-scrollbar > scrollbarbutton { 
-    -moz-appearance: none !important; 
-}
-scrollbar, 
-scrollbar > scrollbarbutton { 
-    border: none !important; 
-    background: none !important; 
+#alltabs-button:hover,
+#back-button:hover,
+#forward-button:hover {
+  opacity: 1;
 }
 
-scrollbar[orient="vertical"] {
-	min-width: 7px !important;
-	max-width: 7px !important;
-}
-scrollbar[orient="horizontal"] {
-	min-height: 6px !important;
-	max-height: 6px !important;
+#urlbar-reload-button,
+#urlbar-stop-button,
+#urlbar-go-button {
+  background: white !important;
 }
 
-scrollbar[orient='horizontal'] > slider > thumb { 
-    min-width: 42px !important; 
-    max-height: 4px !important;
-}
 
-scrollbar[orient='vertical'] > slider > thumb { 
-    min-height: 42px !important; 
-    max-width: 4px !important;
-} 
-
-scrollbar > slider {
-    border: 1px solid transparent;
-    background-color: transparent !important;
-}
-
-scrollbar > slider > thumb {
-    border: none !important;
-    background-color: #cbced7 !important;
-    border-radius: 16px !important;
-    opacity: 1 !important;
-}
-
-scrollbar > slider > thumb:hover,
-scrollbar > slider > thumb:active {
-    background-color: #9b9eaf !important;
-    border-color: #9b9eaf !important;
-}*/
 
 cscrollbar scrollbarbutton ,
 scrollbar gripper {
-	visibility: collapse;
+  visibility: collapse;
 }
 scrollbar ,
-scrollbar thumb {
-	-moz-appearance: none !important;
+scrollbar thumb
+{
+  -moz-appearance: none !important;
 }
 scrollbar[orient="vertical"] {
-	-moz-margin-start: -1px;
+  -moz-margin-start: -1px;
 background: white !important;
-	min-width: 4px;
-	max-width: 4px;
+  min-width: 4px;
+  max-width: 4px;
 }
 scrollbar[orient="horizontal"] {
-	margin-top: -4px;
-	min-height: 4px;
-	max-height: 4px;
+  margin-top: -4px;
+  min-height: 4px;
+  max-height: 4px;
 }
 scrollbar {
-	position: relative;
-	background-image: none;
-	z-index: 2147483647;
-	background-color: transparent;
-	            transition: all 1.1s ease .1s !important;
-	            pointer-events: none !important;
+  position: relative;
+  background-image: none;
+  z-index: 2147483647;
+  background-color: transparent;
+  transition: all 1.1s ease .1s !important;
+  pointer-events: none !important;
 }
 
 scrollbar thumb {
-	border: none !important;
-	border-radius: 4px !important;
-	background-color: #92969b;
-    pointer-events: auto !important;
-    	            transition: all 1.1s ease .1s !important;
-	opacity: 1;
-
-
+  border: none !important;
+  border-radius: 4px !important;
+  background-color: #92969b;
+  pointer-events: auto !important;
+  transition: all 1.1s ease .1s !important;
+  opacity: 1;
 }
 scrollbar:hover thumb {
-	opacity: 1;
+  opacity: 1;
 }
 scrollbar thumb:active ,
 scrollbar thumb:hover {
-	opacity: 1;
-	background-color: ButtonShadow;
+  opacity: 1;
+  background-color: ButtonShadow;
 }
 
 #verticaltabs-splitter {display: none !important;}
-.tabbrowser-tab:first-child { margin-top: 2px !important;}
+
 
 .statuspanel-label {
--moz-appearance: none !important;
-border-radius: 4px !important;
-border-top-left-radius: 4px !important;
-box-shadow: none !important;
-background: #a1b3ff !important;
-opacity: 1 !important;
-color: #ffffff!important;
-font-weight: bold !important;
-padding: 3px 8px !important;
-
-margin: 3px !important;
-
+  -moz-appearance: none !important;
+  border-radius: 4px !important;
+  border-top-left-radius: 4px !important;
+  box-shadow: none !important;
+  background: #a1b3ff !important;
+  opacity: 1 !important;
+  color: #ffffff!important;
+  font-weight: bold !important;
+  padding: 3px 8px !important;
+  margin: 3px !important;
 }
 
 
 statuspanel *{
-box-shadow: none!important;
-border: none !important;
-
-position: absolute !important;
-bottom: 23px !important;
-right: 16px !important;}
-
-/*.tabbrowser-tab {transition: background .3s ease .02s !important;} */
-
-
-.tabbrowser-tab[titlechanged] .tab-icon-image {transform: translateZ(0);
-
-/*animation: newpost .9s ease infinite; */}
-
-.tabbrowser-tab[titlechanged] {}
-
-@keyframes newpost {
-  25% {  transform: scale(1.1);   }
+  box-shadow: none!important;
+  border: none !important;
+  position: absolute !important;
+  bottom: 23px !important;
+  right: 16px !important;
 }
-
-

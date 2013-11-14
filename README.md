@@ -11,15 +11,14 @@ Forked from and entirely inspired by the brilliant [Flèche](https://github.com/
 * Install the [Stylish](https://addons.mozilla.org/en-US/firefox/addon/stylish/) extension.
 * Install the [FXChrome](https://addons.mozilla.org/en-US/firefox/addon/fxchrome/) theme.
 * Install the [Vertical Tabs](https://addons.mozilla.org/en-us/firefox/addon/vertical-tabs/) extension.
-* Install the [Mozilla labs lesschrome](https://addons.mozilla.org/en-US/firefox/addon/prospector-lessChrome-HD/) extension.
 * Install the [Moveable Firefox button](https://addons.mozilla.org/en-us/firefox/addon/movable-firefox-button) extension. 
 * RESTART FIREFOX
 * Go to your [Add-ons Manager](about:addons), select the User Styles page and then write a new style.
 * Give the style a name and paste the contents of [fbchan.userchrome.css](https://github.com/offlineric/this_repo_will_self_destruct/blob/master/fbchan.userchrome.css)
 * Seriously restart firefox if it looks wrong. If it still looks wrong after that, I guess you can bug in a desktop thread on 4chan/g/ if you see me
 
-note: the styling is only set up to accomodate a navbar arranged like mine (back, forward, home, urlbar, refresh, stop, and the firefox button at the far right)
+note: Lesschrome is no longer a requirement
 
 ### intended results
 
-![intended results!](http://i.imgur.com/tfo56qB.png)
+![intended results!](http://i.imgur.com/7c5I1hH.png)

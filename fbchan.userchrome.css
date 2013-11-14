@@ -87,40 +87,51 @@ tab[busy] .tab-icon-image
 
 
 #navigator-toolbox {
-  margin-left: 28px !important;
+  margin-left: 4px !important;
   margin-right: 4px !important; 
   margin-top: -3px !important;
-  box-shadow: 0px 5px 5px -4px rgba(0,0,0,.4) !important; 
   z-index: 0 !important;
   background: transparent !important; 
-  transition: all .2s ease .6s !important; 
   border-top-right-radius: 3px !important;
   padding: 0px !important; 
+  padding-bottom: 2px !important;
   border: none !important; 
 }
 
 #nav-bar {
-  transition: all .7s ease .2s !important;
+  transition: all .6s ease 1.2s !important;
   background: white !important;
   border: none !important;
-  margin-top: -2px !important;
-  margin-bottom: 0px !important;
-  margin-left: 0px !important;
+  margin-top: -3px !important;
+  margin-bottom: -1px !important;
+  margin-left: 24px !important;
   margin-right: 0px !important;
   max-height: 19px !important;
   opacity: 1 !important;
-  z-index: 9001 !important;
-  box-shadow: none !important;
   outline: none !important;
   padding: 0px !important; 
   padding-left: 4px !important;
   padding-right: 4px !important;
-  border-top: 3px solid transparent !important; 
+  border-bottom: 1px solid rgba(90,90,90,.05) !important; 
 }
 
-#nav-bar * {
+#nav-bar, #navigator-toolbox, #nav-bar * {
   box-shadow: 0px 0px 0px transparent !important;
 }
+#nav-bar {margin-top: -35px !important;}
+#navigator-toolbox:after {opacity: 0 !important;
+background: rgba(100, 0, 0, .5) !important;
+padding-top: 10px !important;
+top: 0px !important;
+width: 100% !important;
+position: fixed !important;
+pointer-events: auto !important;
+}
+#navigator-toolbox:hover > #nav-bar, #navigator-toobox:focus > #nav-bar {
+transition: all .6s ease 0s !important;
+transform: translateY(35px);}
+
+
 
 #urlbar-container {
   margin-top: 4px !important;
@@ -130,13 +141,14 @@ tab[busy] .tab-icon-image
   font-size: 9pt !important;
   color: #595c66 !important;
   background: white !important;
-  border: 1px solid #d2d3d4 !important;
+  border: 1px solid #eee !important;
+  box-shadow: inset 0px 0px 3px rgba(0,0,0,.1) !important;
   background: #fff !important;
   padding: 0 !important;
   padding-left: 4px !important;
   margin-left: 4px !important;
   margin-right: 4px !important;
-  margin-bottom: 2px !important;
+  margin-bottom: 0px !important;
   margin-top: -1px !important;
   max-height: 19px !important;
   min-height: 24px !important;     
@@ -158,13 +170,20 @@ tab[busy] .tab-icon-image
   margin-left: -4px !important;
   border-radius: 0px !important;
 }
+.toolbar-primary {
+
+    margin-left: -2px !important;
+    margin-right: -2px !important;
+    border: none !important;
+    display: inherit !important;
+}
 
 #addon-bar {
-  background: #f6f6f6 !important;
-  border-top: 1px solid #d2d3d4 !important;
-  height: 22px !important;
+  background: #fff !important;
+  border-top: 0px solid #d2d3d4 !important;
+  height: 32px !important;
   margin-left: 0px !important;
-  border-left: 1px solid #d2d3d4 !important;
+  border-left: 0px solid #d2d3d4 !important;
 }
 
 
@@ -179,15 +198,16 @@ tab[busy] .tab-icon-image
 }
 
 #tabbrowser-tabs {
-  background: #fff !important;
+  background: transparent !important;
   border: none !important;
-  margin-top: 2px !important;
+/*  margin-top: -33px !important; if you don't use lesschrome uncomment this */
+
   padding: 0px !important;
-  padding-top: 4px !important;
+  padding-top: 0px !important;
   min-width: 328px !important;
   max-width: 328px !important;
   overflow: hidden !important;
-  margin-right: -304px !important;  
+  margin-right: -304px !important;
 }
 
 .tabbrowser-tab > .tab-stack {
@@ -211,12 +231,13 @@ tab[busy] .tab-icon-image
   min-width: -moz-fit-content !important;
   overflow: visible !important;
   display: list-item !important;
- }
+}
+
 
 .tabbrowser-tab:hover, .tabbrowser-tab:hover[selected=true] {
   border-radius: 4px !important;
   margin-right: 0 !important; 
-  background: #a1b3ff!important;
+  background: transparent !important;
 }
 
 .tabbrowser-tab[selected=true] .tab-icon-image {
@@ -242,46 +263,54 @@ tab[busy] .tab-icon-image
   margin-top: 0px !important; 
   padding-top: 0px !important; 
   border: none !important;
-  border-left: 2px solid #a1b3ff !important;
+  border-left: 2px solid #1e90ff !important;
 }
 /*how the popup text will look*/
 .tab-text {
-  font-weight: 600 !important;
-  text-align: left !important;
-  max-width: -moz-fit-content !important; 
-  width: -moz-fit-content !important;
-  min-width: -moz-fit-content !important;
+  transition: max-width .3s linear !important;
+  max-width: 0 !important;
   display: table-cell !important;
   margin-top: -3px !important;
   margin-bottom: 0px !important;
   margin-left: -3px !important;
   padding: 2px !important;
-  background: transparent !important; 
   pointer-events: none !important;
   border-radius: 4px !important;
   border-top-left-radius: 0px !important;
   border-bottom-left-radius: 0px !important;
-  
-}
-.tabbrowser-tab[selected=true] .tab-text {
-  padding-right: 0px !important;
-  padding-left: 2px !important;
-  min-width: 4px !important;
-  min-height: 20px !important;
-  margin-left: -5px !important;
-  margin-top: 0px !important;
-}
-.tabbrowser-tab:hover .tab-text {
-  color: rgba(255,255,255,0.9) !important;
+    padding-left: 29px !important;
+  margin-left: -32px !important;
   color: white !important;
   font-family: droid sans !important;
   font-size: 9pt !important;
   font-weight: 600 !important;
   background: #a1b3ff !important;
-  border: 2px solid #a1b4ff !important;
+  border: 2px solid #a1b3ff !important;
+  opacity: 0;
+}
+
+.tabbrowser-tab:hover .tab-text {
+  opacity: 1;
+  padding-left: 29px !important;
+  margin-left: -32px !important;
+  color: white !important;
+  font-family: droid sans !important;
+  font-size: 9pt !important;
+  font-weight: 600 !important;
+  background: #a1b3ff !important;
+  border: 2px solid #a1b3ff !important;
+
+  box-shadow: 4px 0px 4px -3px rgba(0,0,0,.4) !important;
   padding-right: 3px !important;
   width: -moz-fit-content !important;
   max-width: 328px !important;
+}
+.tabbrowser-tab[selected=true]:hover .tab-text {
+  padding-left: 19px !important;
+  margin-left: -22px !important;
+  margin-top: 0px !important;
+  border-color: #1e90ff !important;
+  background: #1e90ff !important;
 }
 
 .tab-icon-image {
@@ -294,6 +323,10 @@ tab[busy] .tab-icon-image
   padding-bottom: 5px !important;
   -moz-margin-start: 0 !important;
   -moz-margin-end: 0 !important;
+}
+
+.tabbrowser-tab:first-child {
+  margin-top: 4px !important;
 }
 
 #reload-button,
@@ -311,9 +344,12 @@ tab[busy] .tab-icon-image
 {
   padding: 0px !important;
   margin: 0px !important;
+  margin-top: 4px !important;
   padding-left: 4px !important;
   padding-right: 4px !important;
   border: none!important;
+    border: 1px solid #fff !important;
+    border-radius: 4px !important;
   opacity: .6;
 }
 #downloads-button {
@@ -333,12 +369,31 @@ tab[busy] .tab-icon-image
 #back-button:hover,
 #forward-button:hover {
   opacity: 1;
+  border-color: #ddd !important;
+  background: -moz-linear-gradient(top,  rgba(0,0,0,0.0) 0%, rgba(0,0,0,.05) 100%) !important;
+}
+
+#reload-button:active,
+#stop-button:active,
+#downloads-indicator:active,
+#downloads-button:active,
+#appmenu-toolbar-button:active, 
+#tabview-button:active,
+#bookmarks-menu-button:active,
+#bookmarks-button:active,
+#home-button:active,
+#alltabs-button:active,
+#back-button:active,
+#forward-button:active
+{
+  background: white !important; border-color: #ddd !important;
+  box-shadow: inset 0px 0px 3px rgba(0,0,0,.1) !important;
 }
 
 #urlbar-reload-button,
 #urlbar-stop-button,
 #urlbar-go-button {
-  background: white !important;
+  background: transparent !important;
 }
 
 

@@ -102,8 +102,8 @@ tab[busy] .tab-icon-image
   transition: all .6s ease 1.2s !important;
   background: white !important;
   border: none !important;
-  margin-top: -3px !important;
-  margin-bottom: -1px !important;
+  margin-top: 0px !important;
+  margin-bottom: -35px !important;
   margin-left: 24px !important;
   margin-right: 0px !important;
   max-height: 19px !important;
@@ -113,12 +113,13 @@ tab[busy] .tab-icon-image
   padding-left: 4px !important;
   padding-right: 4px !important;
   border-bottom: 1px solid rgba(90,90,90,.05) !important; 
+
 }
 
 #nav-bar, #navigator-toolbox, #nav-bar * {
   box-shadow: 0px 0px 0px transparent !important;
 }
-#nav-bar {margin-top: -35px !important;}
+#nav-bar {transform: translateY(-32px);}
 #navigator-toolbox:after {opacity: 0 !important;
 background: rgba(100, 0, 0, .5) !important;
 padding-top: 10px !important;
@@ -129,7 +130,7 @@ pointer-events: auto !important;
 }
 #navigator-toolbox:hover > #nav-bar, #navigator-toobox:focus > #nav-bar {
 transition: all .6s ease 0s !important;
-transform: translateY(35px);}
+transform: translateY(0px);}
 
 
 
@@ -201,7 +202,7 @@ transform: translateY(35px);}
   background: transparent !important;
   border: none !important;
 /*  margin-top: -33px !important; if you don't use lesschrome uncomment this */
-
+  margin-top: -3px !important;
   padding: 0px !important;
   padding-top: 0px !important;
   min-width: 328px !important;
@@ -344,7 +345,7 @@ transform: translateY(35px);}
 {
   padding: 0px !important;
   margin: 0px !important;
-  margin-top: 4px !important;
+  margin-top: 3px !important;
   padding-left: 4px !important;
   padding-right: 4px !important;
   border: none!important;
@@ -389,15 +390,45 @@ transform: translateY(35px);}
   background: white !important; border-color: #ddd !important;
   box-shadow: inset 0px 0px 3px rgba(0,0,0,.1) !important;
 }
+#back-button .toolbarbutton-icon {
+  list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAbwBzAH90LOFHAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFB0SKMNDqQAAAMdJREFUOMvd0T1KA1EYheHHnz2IkURQGUifVjCmcA1WLmGKWcBwF3CLW7sEC7OBkDKNNonoEqI2rkCwuYXgOMlUgl99zsvHe/jr29kUKKv6AHc4TzH8yO9vKB9ihiFemjK7LeUTLHL5CeOtAWVVn2KOYywxSTG8bQUoq/oslwd4wEWK4f23T5s+uEUfn7hJMXy0eWoCXOMZe7gvq7rXCZBieMVlFldg3gZplJiFTbD6BjnqNGMWd5X3LzDtBMiQdd7/ESP/874ABsgzDKHtShEAAAAASUVORK5CYII=) !important;
+  -moz-image-region: rect(0,16px,16px,0)!important;
+}
+#forward-button .toolbarbutton-icon {
+  list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QATAB7ANnD6+P2AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFB4ttYg9VwAAANhJREFUOMvd0qFKBGEUxfHfqtVgWVhYm6uy1SKIsCCIxeSDTJgHmPmSGL7wvYcPYHLFoIhBERRBmyJoEZvNLWMRd52xCN54Lv/DuYfLX0/rOzHLi3dcYCfF8DTJYGqMfotVHGV50f2NwSau0MNJlhcLjQxSDC8Y4BzzGGZ50WuSQIrhtUpyhi6Os7zo1yrxS6GLuMYMTudmW2tlWX587qd/gDs4QBv32N7bDW+1TqjgQyzjBusphoe6f9DBEEtV/I0Uw3OTEvcr+A5b4+BJBiu4xCDF8Oh/zwg3/zkSZURStQAAAABJRU5ErkJggg==) !important;
+  -moz-image-region: rect(0,16px,16px,0)!important;
+}
+#downloads-indicator-icon {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QATAB7ANnD6+P2AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFCEqczKCyAAAALtJREFUOMvtk60KAlEQhT+1+gSC72BTTFotNsEXUEw33Ae4zAPcMFG7D7DRKAZ/isVoEzQviEnQsmFZ98qCiMWBCTNzznCYH/i1lUIFY90jHauXXGz5UwX/BqktGOumwKggb6ZexlkFEyAqQI4S7OsdGOuqwApoBMg7oKtebsFDMtbVgA1Qz5ROQFO9XN4OUb2cgT5wTaVjoJclB7egXvbAALgnPlQvhzxsJTSp7Xp5bLU7MbBQL/OvfeMTYnMuKqXfcPEAAAAASUVORK5CYII=)!important;
+  -moz-image-region: rect(0,16px,16px,0) !important;
+}
 
+#urlbar-reload-button .toolbarbutton-icon,
+#reload-button .toolbarbutton-icon {
+  list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAWQBcAGYNNwV8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFCUvZzSzQwAAAS1JREFUOMvN0r1KXVEQBeDPH8RCBBMEQa3S2CiKeYOgnZXVgVMpHAiawmewUQvtN5GQsGFDBJtAGn2DEL0EI6a1sBWxSAgE02zhcDler53TrL1nmDVrfnjEirL6XJTVxEPxni4I7vAbO9hKMfzpSFCU1QBWsIpXGKmFL/AuxXB87+hvSx7HF8w9IGiojVBvLXkQX3PyJZYxmsN/sY2pFMNBnaCu4C1mcvJsiuE6Ex9jPcXwq+MQi7L6htdYTjEc6tJ6a++pjEeeYP0Nau46rHQYN7hNMQy3KzjP+KZDwcWMP5ta+JhxqyirkYbqL7Cbv5+aWniPKm+iVZTVRp5HDxawh0m0sN94iV0c0gmWUgxX946+evTsx/fb6Zn5D7jCGF7iH06xibUUw41nZf8BvvpOA395qr0AAAAASUVORK5CYII=) !important;
+  -moz-image-region: rect(0,16px,16px,0)!important;
+}
+
+#urlbar-reload-button:hover .toolbarbutton-icon,
+#reload-button:hover .toolbarbutton-icon {
+    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAWQBcAGYNNwV8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFCUvZzSzQwAAAS1JREFUOMvN0r1KXVEQBeDPH8RCBBMEQa3S2CiKeYOgnZXVgVMpHAiawmewUQvtN5GQsGFDBJtAGn2DEL0EI6a1sBWxSAgE02zhcDler53TrL1nmDVrfnjEirL6XJTVxEPxni4I7vAbO9hKMfzpSFCU1QBWsIpXGKmFL/AuxXB87+hvSx7HF8w9IGiojVBvLXkQX3PyJZYxmsN/sY2pFMNBnaCu4C1mcvJsiuE6Ex9jPcXwq+MQi7L6htdYTjEc6tJ6a++pjEeeYP0Nau46rHQYN7hNMQy3KzjP+KZDwcWMP5ta+JhxqyirkYbqL7Cbv5+aWniPKm+iVZTVRp5HDxawh0m0sN94iV0c0gmWUgxX946+evTsx/fb6Zn5D7jCGF7iH06xibUUw41nZf8BvvpOA395qr0AAAAASUVORK5CYII=) !important;
+    -moz-image-region: rect(0,16px,16px,0)!important;
+    transition: all 0.1s ease 0s;
+}
+#urlbar-stop-button .toolbarbutton-icon,
+#stop-button .toolbarbutton-icon {
+    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAWQBcAGYNNwV8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFCYTY3acBwAAALNJREFUOMvtkkEOwVAURQ8RYmBkAd3A/38Jpo0gUcywOmJEmiAShpbQdhVirkyY3IFUqQX0jV5u7nv/vJsPZVWyQhQnZ+AKTJ01N2lNYAW0nTWdd38tZ+kFGANhFCdDaSHgA+usOW/BDGhpYCNKHzgB88IThFzXawNJO2DirHlkvdUf+Ty/9IUhNoTeAw7ydIG9KO5FBEsNHxXmSH0fWPxzggdsgcBZkzprUiBQDl758z/rBbY4K1u1orxQAAAAAElFTkSuQmCC) !important;
+    -moz-image-region: rect(0,16px,16px,0)!important;
+        list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAWQBcAGYNNwV8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUYFCYlrMwJngAAALFJREFUOMvtkrEOAUEURQ8RolD5gP0T7UaQWDQbo92PmtbENGQTRELpc0RvaWhuIWtZH7Cverm57815NwNV1fJCbJIzcAXm3tmbtDawArre2d67v1Gw9AJMgTQ2yVhaCoTAOm8uWmCAjgY2ogyBE7AoPUHITb02krQDZt7ZR95b/5HP80tfGmJL6APgIE8f2IviXkbgNHxUmBP1Q2D5zwkBsAUi72zmnc2ASDkE1c//rBfBeiy5rGCXCAAAAABJRU5ErkJggg==) !important;
+    -moz-image-region: rect(0,16px,16px,0)!important;
+    
+    opacity: 1.0 !important;
+}
 #urlbar-reload-button,
 #urlbar-stop-button,
 #urlbar-go-button {
   background: transparent !important;
 }
-
-
-
 cscrollbar scrollbarbutton ,
 scrollbar gripper {
   visibility: collapse;

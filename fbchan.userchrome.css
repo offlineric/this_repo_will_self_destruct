@@ -2,6 +2,7 @@
 
 #main-window {
   font-family: droid sans;
+  background: white;
 }
 
 browser {
@@ -119,7 +120,7 @@ tab[busy] .tab-icon-image
 #nav-bar, #navigator-toolbox, #nav-bar * {
   box-shadow: 0px 0px 0px transparent !important;
 }
-#nav-bar {transform: translateY(-32px);}
+#nav-bar {transform: translateY(-33px);}
 #navigator-toolbox:after {opacity: 0 !important;
 background: rgba(100, 0, 0, .5) !important;
 padding-top: 10px !important;
@@ -244,19 +245,23 @@ transform: translateY(0px);}
 .tabbrowser-tab[selected=true] .tab-icon-image {
   background: #fff !important;
   border: none !important;
+  border-top-left-radius: 4px !important;
+  border-bottom-left-radius: 4px !important;
   overflow: visible !important;
-  min-height: 21px !important;
+  min-height: 22px !important;
   min-width: 20px !important; 
   padding: 2px !important; 
   padding-bottom: 3px !important;
+  padding-top: 3px !important;
   padding-left: 3px !important; 
   padding-right: 1px !important;
   margin-left: -1px !important; 
-  margin-top: 0px !important;
+  margin-top: -1px !important;
+  box-shadow: -3px 0px 3px rgba(0,0,0,.1) !important;
 }
 
 .tabbrowser-tab[selected=true] {
-  box-shadow: -3px 0px 3px rgba(0,0,0,.1) !important;
+
   border-radius: 0px !important;
   background: #fff !important; 
   border-top-left-radius: 4px !important; 
@@ -265,6 +270,7 @@ transform: translateY(0px);}
   padding-top: 0px !important; 
   border: none !important;
   border-left: 2px solid #1e90ff !important;
+  
 }
 /*how the popup text will look*/
 .tab-text {

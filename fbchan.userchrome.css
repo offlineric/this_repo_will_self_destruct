@@ -2,7 +2,6 @@
 
 #main-window {
   font-family: droid sans;
-  background: white;
 }
 
 browser {
@@ -200,7 +199,7 @@ transform: translateY(0px);}
 }
 
 #tabbrowser-tabs {
-  background: transparent !important;
+  background: white !important;
   border: none !important;
 /*  margin-top: -33px !important; if you don't use lesschrome uncomment this */
   margin-top: -3px !important;

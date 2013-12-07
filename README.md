@@ -2,6 +2,7 @@ this_repo_will_self_destruct
 ============================
 
 prepare for spectacularly broken shit! you've been warned :)
+also check sersh's [fork](https://github.com/sersh/this_repo_will_self_destruct) if you like darker themes
 
 
 # Browser css

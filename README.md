@@ -18,8 +18,8 @@ Forked from and entirely inspired by the brilliant [Flèche](https://github.com/
 * Give the style a name and paste the contents of [fbchan.userchrome.css](https://github.com/offlineric/this_repo_will_self_destruct/blob/master/fbchan.userchrome.css)
 * Seriously restart firefox if it looks wrong. If it still looks wrong after that, I guess you can bug in a desktop thread on 4chan/g/ if you see me
 
-note: Lesschrome is no longer a requirement
+note: Lesschrome is no longer a requirement. the close button addon can look nice with some setups though
 
 ### intended results
 
-![intended results!](http://i.imgur.com/7c5I1hH.png)
+![intended results!](http://i.imgur.com/QTK5PRP.png)
